@@ -1,0 +1,2256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+<title>Golqi Oil Control</title>
+
+<style>
+
+:root{
+  --red:#E11D2E;
+  --red2:#FF4B5C;
+  --bg:#FFF5F5;
+  --card:#ffffff;
+  --ink:#171717;
+  --muted:#888;
+  --green:#16A34A;
+  --orange:#F59E0B;
+  --danger:#DC2626;
+  --border:#F0D5D5;
+}
+
+*{
+  box-sizing:border-box;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+body{
+  margin:0;
+  background:
+    radial-gradient(
+      800px 400px at 10% -10%,
+      #FFD4D4,
+      transparent 65%
+    ),
+    linear-gradient(
+      180deg,
+      #FFF5F5,
+      #FFF
+    );
+
+  color:var(--ink);
+
+  min-height:100vh;
+}
+
+
+/* =========================
+   APP
+========================= */
+
+.app{
+  width:100%;
+  max-width:520px;
+
+  margin:auto;
+
+  padding:
+    14px
+    14px
+    40px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  margin-bottom:14px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logoIcon{
+  width:45px;
+  height:45px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--red),
+      var(--red2)
+    );
+
+  color:white;
+
+  border-radius:14px;
+
+  font-size:22px;
+
+  box-shadow:
+    0 8px 20px
+    rgba(225,29,46,.2);
+}
+
+.logoText h1{
+  margin:0;
+
+  font-size:20px;
+
+  font-weight:900;
+}
+
+.logoText p{
+  margin:2px 0 0;
+
+  color:var(--muted);
+
+  font-size:10px;
+}
+
+.badge{
+  background:var(--red);
+
+  color:white;
+
+  padding:
+    8px
+    10px;
+
+  border-radius:12px;
+
+  font-size:9px;
+
+  font-weight:900;
+
+  text-align:center;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card{
+  background:white;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:20px;
+
+  padding:15px;
+
+  margin-bottom:12px;
+
+  box-shadow:
+    0 8px 25px
+    rgba(0,0,0,.045);
+}
+
+.cardTitle{
+  font-size:15px;
+
+  font-weight:900;
+
+  margin-bottom:13px;
+}
+
+
+/* =========================
+   FIELD
+========================= */
+
+.row{
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:9px;
+
+  margin-bottom:10px;
+}
+
+.field label{
+  display:block;
+
+  font-size:9px;
+
+  font-weight:900;
+
+  color:#777;
+
+  margin-bottom:5px;
+
+  text-transform:uppercase;
+}
+
+.field input{
+  width:100%;
+
+  border:
+    1.5px solid
+    #E8E8E8;
+
+  background:#FAFAFA;
+
+  border-radius:11px;
+
+  padding:
+    11px
+    10px;
+
+  outline:none;
+
+  font-size:14px;
+
+  font-weight:800;
+
+  color:#222;
+
+  transition:.2s;
+}
+
+.field input:focus{
+  border-color:var(--red);
+
+  background:white;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(225,29,46,.08);
+}
+
+
+/* =========================
+   SHIFT
+========================= */
+
+.shiftCard{
+  border:
+    1.5px solid
+    #F0D0D0;
+
+  border-radius:17px;
+
+  padding:13px;
+
+  margin-top:12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff,
+      #FFF9F9
+    );
+}
+
+.shiftHead{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:11px;
+}
+
+.shiftName{
+  font-size:13px;
+
+  font-weight:900;
+
+  color:var(--red);
+}
+
+.shiftInfo{
+  font-size:9px;
+
+  color:#999;
+
+  font-weight:700;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn{
+  width:100%;
+
+  border:none;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--red),
+      var(--red2)
+    );
+
+  color:white;
+
+  border-radius:14px;
+
+  padding:14px;
+
+  margin-top:5px;
+
+  font-size:13px;
+
+  font-weight:900;
+
+  cursor:pointer;
+
+  box-shadow:
+    0 8px 18px
+    rgba(225,29,46,.18);
+
+  transition:.2s;
+}
+
+.btn:active{
+  transform:scale(.98);
+}
+
+.btnSecondary{
+  background:#FFF0F0;
+
+  color:var(--red);
+
+  box-shadow:none;
+
+  border:
+    1px solid
+    #FFD5D5;
+}
+
+
+/* =========================
+   KPI
+========================= */
+
+.kpi{
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr 1fr;
+
+  gap:7px;
+
+  margin-top:9px;
+}
+
+.k{
+  min-height:67px;
+
+  border-radius:13px;
+
+  padding:9px;
+
+  border:
+    1px dashed
+    #FFCACA;
+
+  background:#FFF8F8;
+}
+
+.kTitle{
+  font-size:8px;
+
+  color:#999;
+
+  font-weight:800;
+
+  margin-bottom:4px;
+}
+
+.kValue{
+  font-size:12px;
+
+  font-weight:900;
+
+  line-height:1.3;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status{
+  margin-top:9px;
+
+  padding:
+    8px
+    10px;
+
+  border-radius:11px;
+
+  font-size:10px;
+
+  font-weight:900;
+
+  text-align:center;
+}
+
+.status.hemat{
+  color:var(--green);
+
+  background:#ECFDF3;
+}
+
+.status.normal{
+  color:var(--orange);
+
+  background:#FFF7E8;
+}
+
+.status.boros{
+  color:var(--danger);
+
+  background:#FFF0F0;
+}
+
+
+/* =========================
+   TOTAL BOX
+========================= */
+
+.totalBox{
+  background:
+    linear-gradient(
+      145deg,
+      #171717,
+      #292929
+    );
+
+  color:white;
+
+  border-radius:19px;
+
+  padding:15px;
+
+  box-shadow:
+    0 12px 30px
+    rgba(0,0,0,.12);
+}
+
+.totalTitle{
+  font-size:13px;
+
+  font-weight:900;
+
+  margin-bottom:8px;
+}
+
+.trow{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:
+    9px
+    0;
+
+  border-bottom:
+    1px solid
+    #343434;
+
+  font-size:11px;
+}
+
+.trow:last-child{
+  border-bottom:0;
+}
+
+.trow span:last-child{
+  font-weight:900;
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progressBox{
+  margin-top:12px;
+}
+
+.progressLabel{
+  display:flex;
+
+  justify-content:space-between;
+
+  font-size:10px;
+
+  font-weight:800;
+
+  margin-bottom:5px;
+}
+
+.progress{
+  width:100%;
+
+  height:9px;
+
+  background:#EEE;
+
+  border-radius:99px;
+
+  overflow:hidden;
+}
+
+.progressBar{
+  height:100%;
+
+  width:0%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #16A34A,
+      #F59E0B,
+      #E11D2E
+    );
+
+  border-radius:99px;
+
+  transition:.4s;
+}
+
+
+/* =========================
+   RIWAYAT
+========================= */
+
+.historyItem{
+  border:
+    1px solid
+    #F0E0E0;
+
+  border-radius:14px;
+
+  padding:11px;
+
+  margin-bottom:8px;
+
+  background:#FFFDFD;
+}
+
+.historyTop{
+  display:flex;
+
+  justify-content:space-between;
+
+  font-size:11px;
+
+  font-weight:900;
+}
+
+.historyDate{
+  color:#999;
+
+  font-size:9px;
+}
+
+.historyGrid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:6px;
+
+  margin-top:8px;
+}
+
+.historyGrid div{
+  background:#FAF5F5;
+
+  border-radius:9px;
+
+  padding:7px;
+
+  text-align:center;
+}
+
+.historyGrid small{
+  display:block;
+
+  font-size:7px;
+
+  color:#999;
+}
+
+.historyGrid b{
+  display:block;
+
+  font-size:10px;
+
+  margin-top:2px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+  text-align:center;
+
+  color:#999;
+
+  font-size:9px;
+
+  padding-top:8px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(min-width:700px){
+
+  .app{
+    max-width:850px;
+
+    padding:
+      25px
+      20px
+      50px;
+  }
+
+  .desktopGrid{
+    display:grid;
+
+    grid-template-columns:
+      1.2fr
+      .8fr;
+
+    gap:14px;
+
+    align-items:start;
+  }
+
+  .card{
+    padding:18px;
+  }
+
+  .logoText h1{
+    font-size:24px;
+  }
+
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media(min-width:1000px){
+
+  .app{
+    max-width:1050px;
+  }
+
+  .desktopGrid{
+    grid-template-columns:
+      1.25fr
+      .75fr;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+<!-- HEADER -->
+
+<div class="header">
+
+  <div class="logo">
+
+    <div class="logoIcon">
+      🍗
+    </div>
+
+    <div class="logoText">
+
+      <h1>
+        Golqi Oil Control
+      </h1>
+
+      <p>
+        Kontrol boros minyak ayam
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="badge">
+    IDEAL<br>
+    19 ML
+  </div>
+
+</div>
+
+
+
+<div class="desktopGrid">
+
+
+<!-- =========================
+     INPUT
+========================= -->
+
+<div>
+
+
+<div class="card">
+
+  <div class="cardTitle">
+    ⚙️ Pengaturan Minyak
+  </div>
+
+  <div class="row">
+
+    <div class="field">
+
+      <label>
+        Harga / Liter
+      </label>
+
+      <input
+        id="hargaLiter"
+        type="number"
+        value="16500"
+        oninput="hitung()"
+      >
+
+    </div>
+
+
+    <div class="field">
+
+      <label>
+        Stok Awal
+      </label>
+
+      <input
+        id="stokAwal"
+        type="number"
+        value="5000"
+        oninput="hitung()"
+      >
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+     SHIFT 1
+========================= -->
+
+<div class="card">
+
+  <div class="shiftCard">
+
+    <div class="shiftHead">
+
+      <div class="shiftName">
+        SHIFT 1
+      </div>
+
+      <div class="shiftInfo">
+        Mulai dari stok awal
+      </div>
+
+    </div>
+
+
+    <div class="row">
+
+      <div class="field">
+
+        <label>
+          Potong Ayam
+        </label>
+
+        <input
+          id="ptg1"
+          type="number"
+          value="42"
+          oninput="hitung()"
+        >
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Minyak Masuk
+        </label>
+
+        <input
+          id="masuk1"
+          type="number"
+          value="0"
+          oninput="hitung()"
+        >
+
+      </div>
+
+    </div>
+
+
+    <div class="row">
+
+      <div class="field">
+
+        <label>
+          Sisa Akhir
+        </label>
+
+        <input
+          id="sisa1"
+          type="number"
+          value="4200"
+          oninput="hitung()"
+        >
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Snack / Lainnya
+        </label>
+
+        <input
+          id="snack1"
+          type="number"
+          value="0"
+          oninput="hitung()"
+        >
+
+      </div>
+
+    </div>
+
+
+    <div class="kpi">
+
+      <div class="k">
+
+        <div class="kTitle">
+          IDEAL
+        </div>
+
+        <div
+          class="kValue"
+          id="ideal1"
+        >
+          -
+        </div>
+
+      </div>
+
+
+      <div class="k">
+
+        <div class="kTitle">
+          REAL
+        </div>
+
+        <div
+          class="kValue"
+          id="real1"
+        >
+          -
+        </div>
+
+      </div>
+
+
+      <div class="k">
+
+        <div class="kTitle">
+          BOROS
+        </div>
+
+        <div
+          class="kValue"
+          id="boros1"
+        >
+          -
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div
+      id="status1"
+      class="status"
+    >
+      -
+    </div>
+
+  </div>
+
+
+<!-- =========================
+     SHIFT 2
+========================= -->
+
+  <div class="shiftCard">
+
+    <div class="shiftHead">
+
+      <div class="shiftName">
+        SHIFT 2
+      </div>
+
+      <div class="shiftInfo">
+        Sisa S1 → Awal S2
+      </div>
+
+    </div>
+
+
+    <div class="row">
+
+      <div class="field">
+
+        <label>
+          Potong Ayam
+        </label>
+
+        <input
+          id="ptg2"
+          type="number"
+          value="47"
+          oninput="hitung()"
+        >
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Minyak Masuk
+        </label>
+
+        <input
+          id="masuk2"
+          type="number"
+          value="0"
+          oninput="hitung()"
+        >
+
+      </div>
+
+    </div>
+
+
+    <div class="row">
+
+      <div class="field">
+
+        <label>
+          Sisa Akhir
+        </label>
+
+        <input
+          id="sisa2"
+          type="number"
+          value="3300"
+          oninput="hitung()"
+        >
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Snack / Lainnya
+        </label>
+
+        <input
+          id="snack2"
+          type="number"
+          value="0"
+          oninput="hitung()"
+        >
+
+      </div>
+
+    </div>
+
+
+    <div class="kpi">
+
+      <div class="k">
+
+        <div class="kTitle">
+          IDEAL
+        </div>
+
+        <div
+          class="kValue"
+          id="ideal2"
+        >
+          -
+        </div>
+
+      </div>
+
+
+      <div class="k">
+
+        <div class="kTitle">
+          REAL
+        </div>
+
+        <div
+          class="kValue"
+          id="real2"
+        >
+          -
+        </div>
+
+      </div>
+
+
+      <div class="k">
+
+        <div class="kTitle">
+          BOROS
+        </div>
+
+        <div
+          class="kValue"
+          id="boros2"
+        >
+          -
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div
+      id="status2"
+      class="status"
+    >
+      -
+    </div>
+
+  </div>
+
+
+
+<!-- =========================
+     SHIFT 3
+========================= -->
+
+  <div class="shiftCard">
+
+    <div class="shiftHead">
+
+      <div class="shiftName">
+        SHIFT 3
+      </div>
+
+      <div class="shiftInfo">
+        Sisa S2 → Awal S3
+      </div>
+
+    </div>
+
+
+    <div class="row">
+
+      <div class="field">
+
+        <label>
+          Potong Ayam
+        </label>
+
+        <input
+          id="ptg3"
+          type="number"
+          value="0"
+          oninput="hitung()"
+        >
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Minyak Masuk
+        </label>
+
+        <input
+          id="masuk3"
+          type="number"
+          value="0"
+          oninput="hitung()"
+        >
+
+      </div>
+
+    </div>
+
+
+    <div class="row">
+
+      <div class="field">
+
+        <label>
+          Sisa Akhir
+        </label>
+
+        <input
+          id="sisa3"
+          type="number"
+          value="0"
+          oninput="hitung()"
+        >
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Snack / Lainnya
+        </label>
+
+        <input
+          id="snack3"
+          type="number"
+          value="0"
+          oninput="hitung()"
+        >
+
+      </div>
+
+    </div>
+
+
+    <div class="kpi">
+
+      <div class="k">
+
+        <div class="kTitle">
+          IDEAL
+        </div>
+
+        <div
+          class="kValue"
+          id="ideal3"
+        >
+          -
+        </div>
+
+      </div>
+
+
+      <div class="k">
+
+        <div class="kTitle">
+          REAL
+        </div>
+
+        <div
+          class="kValue"
+          id="real3"
+        >
+          -
+        </div>
+
+      </div>
+
+
+      <div class="k">
+
+        <div class="kTitle">
+          BOROS
+        </div>
+
+        <div
+          class="kValue"
+          id="boros3"
+        >
+          -
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div
+      id="status3"
+      class="status"
+    >
+      -
+    </div>
+
+  </div>
+
+
+
+<button
+  class="btn"
+  onclick="simpanHari()"
+>
+  💾 SIMPAN HASIL HARI INI
+</button>
+
+
+<button
+  class="btn btnSecondary"
+  onclick="resetData()"
+>
+  🔄 RESET
+</button>
+
+
+</div>
+
+
+<!-- =========================
+     HASIL
+========================= -->
+
+<div>
+
+<div class="card">
+
+  <div class="totalBox">
+
+    <div class="totalTitle">
+      📊 TOTAL HARI INI
+    </div>
+
+
+    <div class="trow">
+
+      <span>
+        Total Potong
+      </span>
+
+      <span id="tPotong">
+        -
+      </span>
+
+    </div>
+
+
+    <div class="trow">
+
+      <span>
+        Ideal Minyak
+      </span>
+
+      <span id="tIdeal">
+        -
+      </span>
+
+    </div>
+
+
+    <div class="trow">
+
+      <span>
+        Real Minyak
+      </span>
+
+      <span id="tReal">
+        -
+      </span>
+
+    </div>
+
+
+    <div class="trow">
+
+      <span>
+        Total Boros
+      </span>
+
+      <span id="tBoros">
+        -
+      </span>
+
+    </div>
+
+
+    <div class="trow">
+
+      <span>
+        Rugi Minyak
+      </span>
+
+      <span id="tRugi">
+        -
+      </span>
+
+    </div>
+
+
+    <div class="trow">
+
+      <span>
+        Rata-rata / Potong
+      </span>
+
+      <span id="tRata">
+        -
+      </span>
+
+    </div>
+
+
+    <div class="trow">
+
+      <span>
+        Shift Paling Boros
+      </span>
+
+      <span id="tPaling">
+        -
+      </span>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="progressBox">
+
+    <div class="progressLabel">
+
+      <span>
+        Efisiensi minyak
+      </span>
+
+      <span id="effText">
+        0%
+      </span>
+
+    </div>
+
+    <div class="progress">
+
+      <div
+        id="progressBar"
+        class="progressBar"
+      ></div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+     PENJELASAN
+========================= -->
+
+<div class="card">
+
+  <div class="cardTitle">
+    💡 Cara Perhitungan
+  </div>
+
+  <div style="
+    font-size:10px;
+    color:#777;
+    line-height:1.7;
+  ">
+
+    <b>Ideal:</b>
+    Jumlah ayam × 19 ml
+
+    <br>
+
+    <b>Real:</b>
+    Stok awal + minyak masuk − sisa akhir
+
+    <br>
+
+    <b>Boros:</b>
+    Real − Ideal
+
+    <br>
+
+    <b>Rugi:</b>
+    Boros × harga minyak / ml
+
+    <br>
+
+    <b>Shift berikutnya:</b>
+    Sisa akhir shift sebelumnya menjadi
+    stok awal shift berikutnya.
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+     RIWAYAT
+========================= -->
+
+<div class="card">
+
+  <div class="cardTitle">
+    🗂️ Riwayat
+  </div>
+
+  <div id="history">
+
+    Belum ada riwayat.
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="footer">
+
+  Golqi Oil Control<br>
+
+  Standar pemakaian:
+  <b>19 ml / potong ayam</b>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+
+// =============================================
+// KONSTANTA
+// =============================================
+
+const IDEAL_ML = 19;
+
+const STORAGE =
+  "golqi_oil_control";
+
+
+// =============================================
+// HELPER
+// =============================================
+
+function get(id){
+
+  return parseFloat(
+    document.getElementById(id).value
+  ) || 0;
+
+}
+
+
+function money(number){
+
+  return "Rp " +
+    Math.round(number)
+      .toLocaleString("id-ID");
+
+}
+
+
+function ml(number){
+
+  return Math.round(number)
+    .toLocaleString("id-ID")
+    + " ml";
+
+}
+
+
+function set(id,value){
+
+  document.getElementById(id)
+    .innerText = value;
+
+}
+
+
+// =============================================
+// STATUS
+// =============================================
+
+function setStatus(
+  id,
+  realPerChicken
+){
+
+  const el =
+    document.getElementById(id);
+
+  el.className =
+    "status";
+
+
+  /*
+    <= 19 ml
+    = hemat / sesuai
+
+    19 - 21
+    = normal
+
+    > 21
+    = boros
+  */
+
+  if(realPerChicken <= 19){
+
+    el.classList.add("hemat");
+
+    el.innerText =
+      "✓ HEMAT / SESUAI TARGET";
+
+  }
+
+  else if(realPerChicken <= 21){
+
+    el.classList.add("normal");
+
+    el.innerText =
+      "⚠ NORMAL - PERLU DIPANTAU";
+
+  }
+
+  else{
+
+    el.classList.add("boros");
+
+    el.innerText =
+      "⚠ BOROS - PERLU DICEK";
+
+  }
+
+}
+
+
+// =============================================
+// HITUNG SEMUA
+// =============================================
+
+function hitung(){
+
+  const hargaLiter =
+    get("hargaLiter");
+
+
+  const hargaPerMl =
+    hargaLiter / 1000;
+
+
+  const stokAwal =
+    get("stokAwal");
+
+
+  let totalPotong = 0;
+
+  let totalIdeal = 0;
+
+  let totalReal = 0;
+
+  let totalBoros = 0;
+
+
+  let previousSisa =
+    stokAwal;
+
+
+  let shiftData = [];
+
+
+  // ==========================================
+  // LOOP 3 SHIFT
+  // ==========================================
+
+  for(let i = 1; i <= 3; i++){
+
+    const potong =
+      get("ptg" + i);
+
+    const masuk =
+      get("masuk" + i);
+
+    const sisa =
+      get("sisa" + i);
+
+    const snack =
+      get("snack" + i);
+
+
+    /*
+      IDEAL
+    */
+
+    const ideal =
+      potong * IDEAL_ML;
+
+
+    /*
+      REAL
+
+      Minyak yang benar-benar
+      berkurang pada shift tersebut.
+
+      Sisa awal
+      + minyak masuk
+      - sisa akhir
+    */
+
+    const real =
+      previousSisa
+      + masuk
+      - sisa;
+
+
+    /*
+      Minyak yang dianggap
+      terpakai untuk snack/lainnya.
+
+      Dikurangi dari real ayam
+      agar analisis ayam lebih akurat.
+    */
+
+    const realAyam =
+      Math.max(
+        0,
+        real - snack
+      );
+
+
+    /*
+      BOROS
+    */
+
+    const boros =
+      realAyam - ideal;
+
+
+    /*
+      ML PER AYAM
+    */
+
+    const perAyam =
+      potong > 0
+        ? realAyam / potong
+        : 0;
+
+
+    /*
+      OUTPUT SHIFT
+    */
+
+    set(
+      "ideal" + i,
+      ml(ideal)
+    );
+
+
+    set(
+      "real" + i,
+      potong > 0
+        ? ml(realAyam)
+          + " / "
+          + perAyam.toFixed(1)
+          + " ml/ptg"
+        : "-"
+    );
+
+
+    set(
+      "boros" + i,
+      ml(boros)
+    );
+
+
+    setStatus(
+      "status" + i,
+      perAyam
+    );
+
+
+    /*
+      TOTAL
+    */
+
+    totalPotong +=
+      potong;
+
+
+    totalIdeal +=
+      ideal;
+
+
+    totalReal +=
+      realAyam;
+
+
+    totalBoros +=
+      boros;
+
+
+    shiftData.push({
+
+      shift:i,
+
+      potong,
+
+      ideal,
+
+      real:realAyam,
+
+      boros,
+
+      perAyam,
+
+      sisa
+
+    });
+
+
+    /*
+      SHIFT BERIKUTNYA
+
+      Sisa shift sekarang
+      menjadi awal shift berikutnya
+    */
+
+    previousSisa =
+      sisa;
+
+  }
+
+
+  // ==========================================
+  // TOTAL
+  // ==========================================
+
+  set(
+    "tPotong",
+    totalPotong
+    .toLocaleString("id-ID")
+    + " ptg"
+  );
+
+
+  set(
+    "tIdeal",
+    ml(totalIdeal)
+  );
+
+
+  set(
+    "tReal",
+    ml(totalReal)
+  );
+
+
+  set(
+    "tBoros",
+    ml(totalBoros)
+  );
+
+
+  /*
+    RUGI
+
+    Jika boros negatif,
+    tidak dianggap rugi.
+  */
+
+  const rugi =
+    Math.max(
+      0,
+      totalBoros
+    )
+    *
+    hargaPerMl;
+
+
+  set(
+    "tRugi",
+    money(rugi)
+  );
+
+
+  /*
+    RATA-RATA
+  */
+
+  const rata =
+    totalPotong > 0
+      ? totalReal / totalPotong
+      : 0;
+
+
+  set(
+    "tRata",
+    rata.toFixed(1)
+    + " ml/ptg"
+  );
+
+
+  /*
+    SHIFT PALING BOROS
+
+    Berdasarkan ml/ayam
+  */
+
+  const aktif =
+    shiftData.filter(
+      x => x.potong > 0
+    );
+
+
+  if(aktif.length){
+
+    aktif.sort(
+      (a,b) =>
+        b.perAyam - a.perAyam
+    );
+
+
+    set(
+      "tPaling",
+      "SHIFT "
+      + aktif[0].shift
+      + " • "
+      + aktif[0].perAyam.toFixed(1)
+      + " ml"
+    );
+
+  }
+  else{
+
+    set(
+      "tPaling",
+      "-"
+    );
+
+  }
+
+
+  /*
+    EFISIENSI
+
+    100% jika tepat 19ml.
+
+    Jika lebih boros,
+    persentase turun.
+  */
+
+  let efficiency = 0;
+
+
+  if(totalPotong > 0){
+
+    efficiency =
+      (
+        totalIdeal /
+        totalReal
+      )
+      * 100;
+
+    efficiency =
+      Math.min(
+        100,
+        efficiency
+      );
+
+  }
+
+
+  set(
+    "effText",
+    efficiency.toFixed(0)
+    + "%"
+  );
+
+
+  document.getElementById(
+    "progressBar"
+  ).style.width =
+    efficiency + "%";
+
+
+  /*
+    SIMPAN HASIL TERAKHIR
+  */
+
+  window.lastCalculation = {
+
+    hargaLiter,
+
+    stokAwal,
+
+    totalPotong,
+
+    totalIdeal,
+
+    totalReal,
+
+    totalBoros,
+
+    rugi,
+
+    rata,
+
+    shiftData,
+
+    waktu:
+      new Date().toLocaleString(
+        "id-ID"
+      )
+
+  };
+
+}
+
+
+// =============================================
+// SIMPAN HARI INI
+// =============================================
+
+function simpanHari(){
+
+  hitung();
+
+
+  const old =
+    JSON.parse(
+      localStorage.getItem(STORAGE)
+      || "[]"
+    );
+
+
+  old.push(
+    window.lastCalculation
+  );
+
+
+  localStorage.setItem(
+    STORAGE,
+    JSON.stringify(old)
+  );
+
+
+  renderHistory();
+
+
+  alert(
+    "Hasil hari ini berhasil disimpan."
+  );
+
+}
+
+
+// =============================================
+// RIWAYAT
+// =============================================
+
+function renderHistory(){
+
+  const history =
+    document.getElementById(
+      "history"
+    );
+
+
+  const data =
+    JSON.parse(
+      localStorage.getItem(STORAGE)
+      || "[]"
+    );
+
+
+  if(!data.length){
+
+    history.innerHTML =
+      "Belum ada riwayat.";
+
+    return;
+
+  }
+
+
+  history.innerHTML =
+    "";
+
+
+  /*
+    Tampilkan terbaru
+    terlebih dahulu
+  */
+
+  data
+    .slice()
+    .reverse()
+    .forEach(
+      function(item,index){
+
+        history.innerHTML += `
+
+          <div class="historyItem">
+
+            <div class="historyTop">
+
+              <span>
+                HARI ${data.length-index}
+              </span>
+
+              <span class="historyDate">
+                ${item.waktu}
+              </span>
+
+            </div>
+
+
+            <div class="historyGrid">
+
+              <div>
+
+                <small>
+                  POTONG
+                </small>
+
+                <b>
+                  ${item.totalPotong}
+                </b>
+
+              </div>
+
+
+              <div>
+
+                <small>
+                  REAL
+                </small>
+
+                <b>
+                  ${Math.round(item.totalReal)} ml
+                </b>
+
+              </div>
+
+
+              <div>
+
+                <small>
+                  BOROS
+                </small>
+
+                <b>
+                  ${Math.round(item.totalBoros)} ml
+                </b>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        `;
+
+      }
+    );
+
+}
+
+
+// =============================================
+// RESET
+// =============================================
+
+function resetData(){
+
+  const yakin =
+    confirm(
+      "Reset semua input?"
+    );
+
+
+  if(!yakin){
+
+    return;
+
+  }
+
+
+  document
+    .querySelectorAll(
+      "input"
+    )
+    .forEach(
+      function(input){
+
+        if(
+          input.id ===
+          "hargaLiter"
+        ){
+
+          input.value =
+            16500;
+
+        }
+
+        else if(
+          input.id ===
+          "stokAwal"
+        ){
+
+          input.value =
+            5000;
+
+        }
+
+        else if(
+          input.id.startsWith(
+            "sisa"
+          )
+        ){
+
+          input.value =
+            0;
+
+        }
+
+        else{
+
+          input.value =
+            0;
+
+        }
+
+      }
+    );
+
+
+  /*
+    Default contoh
+  */
+
+  document.getElementById(
+    "ptg1"
+  ).value = 42;
+
+  document.getElementById(
+    "sisa1"
+  ).value = 4200;
+
+  document.getElementById(
+    "ptg2"
+  ).value = 47;
+
+  document.getElementById(
+    "sisa2"
+  ).value = 3300;
+
+
+  hitung();
+
+}
+
+
+// =============================================
+// EVENT
+// =============================================
+
+document
+  .querySelectorAll(
+    "input"
+  )
+  .forEach(
+    function(input){
+
+      input.addEventListener(
+        "input",
+        hitung
+      );
+
+    }
+  );
+
+
+// =============================================
+// START
+// =============================================
+
+hitung();
+
+renderHistory();
+
+</script>
+
+</body>
+</html>
