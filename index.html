@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+<meta
+  name="viewport"
+  content="width=device-width,initial-scale=1,maximum-scale=1"
+>
 
 <title>Golqi Oil Control</title>
 
@@ -18,6 +24,7 @@
   --green:#16A34A;
   --orange:#F59E0B;
   --danger:#DC2626;
+  --blue:#2563EB;
   --border:#F0D5D5;
 }
 
@@ -34,6 +41,7 @@
 
 body{
   margin:0;
+
   background:
     radial-gradient(
       800px 400px at 10% -10%,
@@ -51,15 +59,9 @@ body{
   min-height:100vh;
 }
 
-
-/* =========================
-   APP
-========================= */
-
 .app{
   width:100%;
   max-width:520px;
-
   margin:auto;
 
   padding:
@@ -244,6 +246,43 @@ body{
     rgba(225,29,46,.08);
 }
 
+.field input:disabled{
+  background:#F1F1F1;
+
+  color:#777;
+
+  cursor:not-allowed;
+
+  border-color:#DDD;
+}
+
+
+/* =========================
+   DAY INFO
+========================= */
+
+.dayInfo{
+  background:#FFF7F7;
+
+  border:
+    1px solid
+    #F3DADA;
+
+  border-radius:13px;
+
+  padding:10px;
+
+  margin-bottom:12px;
+
+  font-size:10px;
+
+  font-weight:800;
+}
+
+.dayInfo strong{
+  color:var(--red);
+}
+
 
 /* =========================
    SHIFT
@@ -275,6 +314,8 @@ body{
 
   align-items:center;
 
+  gap:8px;
+
   margin-bottom:11px;
 }
 
@@ -292,6 +333,77 @@ body{
   color:#999;
 
   font-weight:700;
+
+  text-align:right;
+}
+
+
+/* =========================
+   LOCK
+========================= */
+
+.lockBox{
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:8px;
+
+  margin-bottom:11px;
+
+  padding:9px;
+
+  border-radius:11px;
+
+  background:#FFF7F7;
+
+  border:
+    1px solid
+    #F0DADA;
+}
+
+.lockStatus{
+  font-size:9px;
+
+  font-weight:900;
+}
+
+.lockStatus.locked{
+  color:var(--danger);
+}
+
+.lockStatus.unlocked{
+  color:var(--green);
+}
+
+.lockBtn{
+  border:none;
+
+  border-radius:9px;
+
+  padding:
+    8px
+    10px;
+
+  font-size:9px;
+
+  font-weight:900;
+
+  cursor:pointer;
+}
+
+.lockBtn.lock{
+  background:#FFECEC;
+
+  color:var(--danger);
+}
+
+.lockBtn.unlock{
+  background:#ECFDF3;
+
+  color:var(--green);
 }
 
 
@@ -317,7 +429,7 @@ body{
 
   padding:14px;
 
-  margin-top:5px;
+  margin-top:8px;
 
   font-size:13px;
 
@@ -346,6 +458,18 @@ body{
   border:
     1px solid
     #FFD5D5;
+}
+
+.btnDanger{
+  background:#FFF0F0;
+
+  color:var(--danger);
+
+  box-shadow:none;
+
+  border:
+    1px solid
+    #FFD0D0;
 }
 
 
@@ -437,7 +561,7 @@ body{
 
 
 /* =========================
-   TOTAL BOX
+   TOTAL
 ========================= */
 
 .totalBox{
@@ -475,8 +599,7 @@ body{
   align-items:center;
 
   padding:
-    9px
-    0;
+    9px 0;
 
   border-bottom:
     1px solid
@@ -546,7 +669,51 @@ body{
 
 
 /* =========================
-   RIWAYAT
+   STATS
+========================= */
+
+.stats{
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:8px;
+}
+
+.stat{
+  border-radius:14px;
+
+  padding:11px;
+
+  background:#FAF5F5;
+
+  border:
+    1px solid
+    #F0E0E0;
+}
+
+.stat small{
+  display:block;
+
+  color:#999;
+
+  font-size:8px;
+
+  font-weight:800;
+}
+
+.stat b{
+  display:block;
+
+  margin-top:4px;
+
+  font-size:13px;
+}
+
+
+/* =========================
+   HISTORY
 ========================= */
 
 .historyItem{
@@ -558,7 +725,7 @@ body{
 
   padding:11px;
 
-  margin-bottom:8px;
+  margin-bottom:9px;
 
   background:#FFFDFD;
 }
@@ -567,6 +734,8 @@ body{
   display:flex;
 
   justify-content:space-between;
+
+  gap:10px;
 
   font-size:11px;
 
@@ -577,17 +746,19 @@ body{
   color:#999;
 
   font-size:9px;
+
+  margin-top:3px;
 }
 
 .historyGrid{
   display:grid;
 
   grid-template-columns:
-    repeat(3,1fr);
+    repeat(2,1fr);
 
   gap:6px;
 
-  margin-top:8px;
+  margin-top:9px;
 }
 
 .historyGrid div{
@@ -595,7 +766,7 @@ body{
 
   border-radius:9px;
 
-  padding:7px;
+  padding:8px;
 
   text-align:center;
 }
@@ -616,6 +787,74 @@ body{
   margin-top:2px;
 }
 
+.historyShift{
+  margin-top:9px;
+
+  border-radius:10px;
+
+  padding:8px;
+
+  background:#FFF7F7;
+
+  border:
+    1px solid
+    #F5E0E0;
+}
+
+.historyShiftTitle{
+  color:var(--red);
+
+  font-size:9px;
+
+  font-weight:900;
+
+  margin-bottom:5px;
+}
+
+.historyShiftLine{
+  display:flex;
+
+  justify-content:space-between;
+
+  font-size:9px;
+
+  padding:2px 0;
+}
+
+.historyDelete{
+  width:100%;
+
+  margin-top:8px;
+
+  padding:8px;
+
+  border-radius:9px;
+
+  border:
+    1px solid
+    #FFD5D5;
+
+  background:#FFF1F1;
+
+  color:var(--danger);
+
+  font-size:9px;
+
+  font-weight:900;
+
+  cursor:pointer;
+}
+
+.empty{
+  padding:15px;
+
+  text-align:center;
+
+  color:#999;
+
+  font-size:10px;
+}
+
 
 /* =========================
    FOOTER
@@ -633,7 +872,7 @@ body{
 
 
 /* =========================
-   TABLET
+   DESKTOP
 ========================= */
 
 @media(min-width:700px){
@@ -666,13 +905,7 @@ body{
   .logoText h1{
     font-size:24px;
   }
-
 }
-
-
-/* =========================
-   DESKTOP
-========================= */
 
 @media(min-width:1000px){
 
@@ -689,6 +922,7 @@ body{
 }
 
 </style>
+
 </head>
 
 
@@ -697,7 +931,9 @@ body{
 <div class="app">
 
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <div class="header">
 
@@ -714,7 +950,7 @@ body{
       </h1>
 
       <p>
-        Kontrol boros minyak ayam
+        Kontrol pemakaian minyak ayam
       </p>
 
     </div>
@@ -722,12 +958,11 @@ body{
   </div>
 
   <div class="badge">
-    IDEAL<br>
+    TARGET<br>
     19 ML
   </div>
 
 </div>
-
 
 
 <div class="desktopGrid">
@@ -740,11 +975,38 @@ body{
 <div>
 
 
+<!-- DAY INFO -->
+
 <div class="card">
+
+  <div class="dayInfo">
+
+    📅 Hari aktif:
+    <strong id="hariAktif">
+      -
+    </strong>
+
+    <br>
+
+    🕒 Terakhir disimpan:
+    <strong id="terakhirSimpan">
+      Belum ada
+    </strong>
+
+    <br>
+
+    📦 Stok awal hari ini:
+    <strong id="infoStokAwal">
+      -
+    </strong>
+
+  </div>
+
 
   <div class="cardTitle">
     ⚙️ Pengaturan Minyak
   </div>
+
 
   <div class="row">
 
@@ -758,7 +1020,8 @@ body{
         id="hargaLiter"
         type="number"
         value="16500"
-        oninput="hitung()"
+        min="0"
+        oninput="hitung(); autoSave()"
       >
 
     </div>
@@ -774,15 +1037,23 @@ body{
         id="stokAwal"
         type="number"
         value="5000"
-        oninput="hitung()"
+        min="0"
+        oninput="hitung(); autoSave()"
       >
 
     </div>
 
   </div>
 
-</div>
 
+  <button
+    class="btn btnSecondary"
+    onclick="gunakanStokKemarin()"
+  >
+    📦 GUNAKAN STOK AKHIR KEMARIN
+  </button>
+
+</div>
 
 
 <!-- =========================
@@ -800,8 +1071,31 @@ body{
       </div>
 
       <div class="shiftInfo">
-        Mulai dari stok awal
+        Dimulai dari stok awal
       </div>
+
+    </div>
+
+
+    <!-- LOCK -->
+
+    <div class="lockBox">
+
+      <div
+        id="lockStatus"
+        class="lockStatus unlocked"
+      >
+        🔓 SHIFT 1 TERBUKA
+      </div>
+
+
+      <button
+        id="lockButton"
+        class="lockBtn lock"
+        onclick="toggleLock()"
+      >
+        🔒 KUNCI
+      </button>
 
     </div>
 
@@ -817,8 +1111,9 @@ body{
         <input
           id="ptg1"
           type="number"
-          value="42"
-          oninput="hitung()"
+          value="0"
+          min="0"
+          oninput="hitung(); autoSave()"
         >
 
       </div>
@@ -834,7 +1129,8 @@ body{
           id="masuk1"
           type="number"
           value="0"
-          oninput="hitung()"
+          min="0"
+          oninput="hitung(); autoSave()"
         >
 
       </div>
@@ -853,8 +1149,9 @@ body{
         <input
           id="sisa1"
           type="number"
-          value="4200"
-          oninput="hitung()"
+          value="0"
+          min="0"
+          oninput="hitung(); autoSave()"
         >
 
       </div>
@@ -863,14 +1160,14 @@ body{
       <div class="field">
 
         <label>
-          Snack / Lainnya
+          Keterangan
         </label>
 
         <input
-          id="snack1"
-          type="number"
-          value="0"
-          oninput="hitung()"
+          id="ket1"
+          type="text"
+          placeholder="Opsional"
+          oninput="autoSave()"
         >
 
       </div>
@@ -953,7 +1250,7 @@ body{
       </div>
 
       <div class="shiftInfo">
-        Sisa S1 → Awal S2
+        Sisa Shift 1 → Awal Shift 2
       </div>
 
     </div>
@@ -970,8 +1267,9 @@ body{
         <input
           id="ptg2"
           type="number"
-          value="47"
-          oninput="hitung()"
+          value="0"
+          min="0"
+          oninput="hitung(); autoSave()"
         >
 
       </div>
@@ -987,7 +1285,8 @@ body{
           id="masuk2"
           type="number"
           value="0"
-          oninput="hitung()"
+          min="0"
+          oninput="hitung(); autoSave()"
         >
 
       </div>
@@ -1006,8 +1305,9 @@ body{
         <input
           id="sisa2"
           type="number"
-          value="3300"
-          oninput="hitung()"
+          value="0"
+          min="0"
+          oninput="hitung(); autoSave()"
         >
 
       </div>
@@ -1016,14 +1316,14 @@ body{
       <div class="field">
 
         <label>
-          Snack / Lainnya
+          Keterangan
         </label>
 
         <input
-          id="snack2"
-          type="number"
-          value="0"
-          oninput="hitung()"
+          id="ket2"
+          type="text"
+          placeholder="Opsional"
+          oninput="autoSave()"
         >
 
       </div>
@@ -1093,176 +1393,30 @@ body{
   </div>
 
 
-
-<!-- =========================
-     SHIFT 3
-========================= -->
-
-  <div class="shiftCard">
-
-    <div class="shiftHead">
-
-      <div class="shiftName">
-        SHIFT 3
-      </div>
-
-      <div class="shiftInfo">
-        Sisa S2 → Awal S3
-      </div>
-
-    </div>
+  <button
+    class="btn"
+    onclick="simpanHari()"
+  >
+    💾 SIMPAN HASIL HARI INI
+  </button>
 
 
-    <div class="row">
-
-      <div class="field">
-
-        <label>
-          Potong Ayam
-        </label>
-
-        <input
-          id="ptg3"
-          type="number"
-          value="0"
-          oninput="hitung()"
-        >
-
-      </div>
+  <button
+    class="btn btnSecondary"
+    onclick="mulaiHariBaru()"
+  >
+    🌅 MULAI HARI BARU
+  </button>
 
 
-      <div class="field">
+  <button
+    class="btn btnDanger"
+    onclick="resetInput()"
+  >
+    🔄 RESET INPUT HARI INI
+  </button>
 
-        <label>
-          Minyak Masuk
-        </label>
-
-        <input
-          id="masuk3"
-          type="number"
-          value="0"
-          oninput="hitung()"
-        >
-
-      </div>
-
-    </div>
-
-
-    <div class="row">
-
-      <div class="field">
-
-        <label>
-          Sisa Akhir
-        </label>
-
-        <input
-          id="sisa3"
-          type="number"
-          value="0"
-          oninput="hitung()"
-        >
-
-      </div>
-
-
-      <div class="field">
-
-        <label>
-          Snack / Lainnya
-        </label>
-
-        <input
-          id="snack3"
-          type="number"
-          value="0"
-          oninput="hitung()"
-        >
-
-      </div>
-
-    </div>
-
-
-    <div class="kpi">
-
-      <div class="k">
-
-        <div class="kTitle">
-          IDEAL
-        </div>
-
-        <div
-          class="kValue"
-          id="ideal3"
-        >
-          -
-        </div>
-
-      </div>
-
-
-      <div class="k">
-
-        <div class="kTitle">
-          REAL
-        </div>
-
-        <div
-          class="kValue"
-          id="real3"
-        >
-          -
-        </div>
-
-      </div>
-
-
-      <div class="k">
-
-        <div class="kTitle">
-          BOROS
-        </div>
-
-        <div
-          class="kValue"
-          id="boros3"
-        >
-          -
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <div
-      id="status3"
-      class="status"
-    >
-      -
-    </div>
-
-  </div>
-
-
-
-<button
-  class="btn"
-  onclick="simpanHari()"
->
-  💾 SIMPAN HASIL HARI INI
-</button>
-
-
-<button
-  class="btn btnSecondary"
-  onclick="resetData()"
->
-  🔄 RESET
-</button>
-
+</div>
 
 </div>
 
@@ -1272,6 +1426,7 @@ body{
 ========================= -->
 
 <div>
+
 
 <div class="card">
 
@@ -1372,8 +1527,20 @@ body{
 
     </div>
 
-  </div>
 
+    <div class="trow">
+
+      <span>
+        Stok Akhir Hari Ini
+      </span>
+
+      <span id="tStokAkhir">
+        -
+      </span>
+
+    </div>
+
+  </div>
 
 
   <div class="progressBox">
@@ -1390,6 +1557,7 @@ body{
 
     </div>
 
+
     <div class="progress">
 
       <div
@@ -1404,9 +1572,77 @@ body{
 </div>
 
 
+<!-- =========================
+     STATISTIK
+========================= -->
+
+<div class="card">
+
+  <div class="cardTitle">
+    📈 Statistik Riwayat
+  </div>
+
+
+  <div class="stats">
+
+    <div class="stat">
+
+      <small>
+        TOTAL HARI
+      </small>
+
+      <b id="statHari">
+        0
+      </b>
+
+    </div>
+
+
+    <div class="stat">
+
+      <small>
+        TOTAL POTONG
+      </small>
+
+      <b id="statPotong">
+        0
+      </b>
+
+    </div>
+
+
+    <div class="stat">
+
+      <small>
+        TOTAL BOROS
+      </small>
+
+      <b id="statBoros">
+        0 ml
+      </b>
+
+    </div>
+
+
+    <div class="stat">
+
+      <small>
+        TOTAL KERUGIAN
+      </small>
+
+      <b id="statRugi">
+        Rp 0
+      </b>
+
+    </div>
+
+  </div>
+
+</div>
+
 
 <!-- =========================
-     PENJELASAN
+     CARA HITUNG
 ========================= -->
 
 <div class="card">
@@ -1414,6 +1650,7 @@ body{
   <div class="cardTitle">
     💡 Cara Perhitungan
   </div>
+
 
   <div style="
     font-size:10px;
@@ -1427,7 +1664,7 @@ body{
     <br>
 
     <b>Real:</b>
-    Stok awal + minyak masuk − sisa akhir
+    Stok awal shift + minyak masuk − sisa akhir
 
     <br>
 
@@ -1441,14 +1678,19 @@ body{
 
     <br>
 
-    <b>Shift berikutnya:</b>
-    Sisa akhir shift sebelumnya menjadi
-    stok awal shift berikutnya.
+    <b>Shift 2:</b>
+    Sisa akhir Shift 1 otomatis menjadi
+    stok awal Shift 2.
+
+    <br>
+
+    <b>Besok:</b>
+    Sisa akhir Shift 2 otomatis menjadi
+    stok awal hari berikutnya.
 
   </div>
 
 </div>
-
 
 
 <!-- =========================
@@ -1458,8 +1700,9 @@ body{
 <div class="card">
 
   <div class="cardTitle">
-    🗂️ Riwayat
+    🗂️ Riwayat Penggunaan
   </div>
+
 
   <div id="history">
 
@@ -1467,7 +1710,16 @@ body{
 
   </div>
 
+
+  <button
+    class="btn btnDanger"
+    onclick="hapusSemuaRiwayat()"
+  >
+    🗑️ HAPUS SEMUA RIWAYAT
+  </button>
+
 </div>
+
 
 </div>
 
@@ -1476,39 +1728,67 @@ body{
 
 <div class="footer">
 
-  Golqi Oil Control<br>
+  Golqi Oil Control
+
+  <br>
 
   Standar pemakaian:
   <b>19 ml / potong ayam</b>
 
 </div>
 
-</div>
 
+</div>
 
 
 <script>
 
-
-// =============================================
-// KONSTANTA
-// =============================================
+/* =========================================
+   KONSTANTA
+========================================= */
 
 const IDEAL_ML = 19;
 
 const STORAGE =
-  "golqi_oil_control";
+  "golqi_oil_control_final_v3";
+
+const DAY_STORAGE =
+  "golqi_current_day_v3";
+
+const LOCK_STORAGE =
+  "golqi_shift1_lock_v3";
 
 
-// =============================================
-// HELPER
-// =============================================
+/* =========================================
+   HELPER
+========================================= */
 
 function get(id){
 
   return parseFloat(
-    document.getElementById(id).value
+    document
+      .getElementById(id)
+      .value
   ) || 0;
+
+}
+
+
+function getText(id){
+
+  return document
+    .getElementById(id)
+    .value
+    .trim();
+
+}
+
+
+function set(id,value){
+
+  document
+    .getElementById(id)
+    .innerText = value;
 
 }
 
@@ -1531,42 +1811,52 @@ function ml(number){
 }
 
 
-function set(id,value){
+function todayKey(){
 
-  document.getElementById(id)
-    .innerText = value;
+  const d =
+    new Date();
+
+  return d
+    .toISOString()
+    .slice(0,10);
 
 }
 
 
-// =============================================
-// STATUS
-// =============================================
+function todayText(){
+
+  return new Date()
+    .toLocaleDateString(
+      "id-ID",
+      {
+        weekday:"long",
+        day:"2-digit",
+        month:"long",
+        year:"numeric"
+      }
+    );
+
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
 
 function setStatus(
   id,
-  realPerChicken
+  perChicken
 ){
 
   const el =
-    document.getElementById(id);
+    document
+      .getElementById(id);
 
   el.className =
     "status";
 
 
-  /*
-    <= 19 ml
-    = hemat / sesuai
-
-    19 - 21
-    = normal
-
-    > 21
-    = boros
-  */
-
-  if(realPerChicken <= 19){
+  if(perChicken <= 19){
 
     el.classList.add("hemat");
 
@@ -1575,7 +1865,7 @@ function setStatus(
 
   }
 
-  else if(realPerChicken <= 21){
+  else if(perChicken <= 21){
 
     el.classList.add("normal");
 
@@ -1596,22 +1886,65 @@ function setStatus(
 }
 
 
-// =============================================
-// HITUNG SEMUA
-// =============================================
+/* =========================================
+   DATA INPUT SAAT INI
+========================================= */
+
+function ambilData(){
+
+  return {
+
+    hargaLiter:
+      get("hargaLiter"),
+
+    stokAwal:
+      get("stokAwal"),
+
+    shift1:{
+      potong:
+        get("ptg1"),
+
+      masuk:
+        get("masuk1"),
+
+      sisa:
+        get("sisa1"),
+
+      keterangan:
+        getText("ket1")
+    },
+
+    shift2:{
+      potong:
+        get("ptg2"),
+
+      masuk:
+        get("masuk2"),
+
+      sisa:
+        get("sisa2"),
+
+      keterangan:
+        getText("ket2")
+    }
+
+  };
+
+}
+
+
+/* =========================================
+   HITUNG
+========================================= */
 
 function hitung(){
 
-  const hargaLiter =
-    get("hargaLiter");
+  const data =
+    ambilData();
 
 
   const hargaPerMl =
-    hargaLiter / 1000;
-
-
-  const stokAwal =
-    get("stokAwal");
+    data.hargaLiter / 1000;
 
 
   let totalPotong = 0;
@@ -1624,183 +1957,206 @@ function hitung(){
 
 
   let previousSisa =
-    stokAwal;
+    data.stokAwal;
 
 
-  let shiftData = [];
+  let shifts = [];
 
 
-  // ==========================================
-  // LOOP 3 SHIFT
-  // ==========================================
+  for(
+    let i=1;
+    i<=2;
+    i++
+  ){
 
-  for(let i = 1; i <= 3; i++){
+    const shift =
+      data["shift"+i];
 
-    const potong =
-      get("ptg" + i);
-
-    const masuk =
-      get("masuk" + i);
-
-    const sisa =
-      get("sisa" + i);
-
-    const snack =
-      get("snack" + i);
-
-
-    /*
-      IDEAL
-    */
 
     const ideal =
-      potong * IDEAL_ML;
+      shift.potong *
+      IDEAL_ML;
 
-
-    /*
-      REAL
-
-      Minyak yang benar-benar
-      berkurang pada shift tersebut.
-
-      Sisa awal
-      + minyak masuk
-      - sisa akhir
-    */
 
     const real =
-      previousSisa
-      + masuk
-      - sisa;
-
-
-    /*
-      Minyak yang dianggap
-      terpakai untuk snack/lainnya.
-
-      Dikurangi dari real ayam
-      agar analisis ayam lebih akurat.
-    */
-
-    const realAyam =
       Math.max(
         0,
-        real - snack
+        previousSisa +
+        shift.masuk -
+        shift.sisa
       );
 
 
-    /*
-      BOROS
-    */
-
     const boros =
-      realAyam - ideal;
+      Math.max(
+        0,
+        real - ideal
+      );
 
-
-    /*
-      ML PER AYAM
-    */
 
     const perAyam =
-      potong > 0
-        ? realAyam / potong
+      shift.potong > 0
+        ? real / shift.potong
         : 0;
 
 
-    /*
-      OUTPUT SHIFT
-    */
-
     set(
-      "ideal" + i,
+      "ideal"+i,
       ml(ideal)
     );
 
 
     set(
-      "real" + i,
-      potong > 0
-        ? ml(realAyam)
-          + " / "
-          + perAyam.toFixed(1)
-          + " ml/ptg"
+      "real"+i,
+
+      shift.potong > 0
+
+        ? ml(real)
+          +
+          " / "
+          +
+          perAyam.toFixed(1)
+          +
+          " ml/ptg"
+
         : "-"
     );
 
 
     set(
-      "boros" + i,
+      "boros"+i,
       ml(boros)
     );
 
 
     setStatus(
-      "status" + i,
+      "status"+i,
       perAyam
     );
 
 
-    /*
-      TOTAL
-    */
+    shifts.push({
+
+      potong:
+        shift.potong,
+
+      masuk:
+        shift.masuk,
+
+      sisa:
+        shift.sisa,
+
+      ideal:
+        ideal,
+
+      real:
+        real,
+
+      boros:
+        boros,
+
+      perAyam:
+        perAyam,
+
+      keterangan:
+        shift.keterangan
+
+    });
+
 
     totalPotong +=
-      potong;
-
+      shift.potong;
 
     totalIdeal +=
       ideal;
 
-
     totalReal +=
-      realAyam;
-
+      real;
 
     totalBoros +=
       boros;
 
 
-    shiftData.push({
-
-      shift:i,
-
-      potong,
-
-      ideal,
-
-      real:realAyam,
-
-      boros,
-
-      perAyam,
-
-      sisa
-
-    });
-
-
-    /*
-      SHIFT BERIKUTNYA
-
-      Sisa shift sekarang
-      menjadi awal shift berikutnya
-    */
-
     previousSisa =
-      sisa;
+      shift.sisa;
 
   }
 
 
-  // ==========================================
-  // TOTAL
-  // ==========================================
+  const rugi =
+    totalBoros *
+    hargaPerMl;
+
+
+  const rata =
+    totalPotong > 0
+      ? totalReal /
+        totalPotong
+      : 0;
+
+
+  let palingBoros =
+    "-";
+
+
+  if(
+    shifts[0].boros >
+    shifts[1].boros
+  ){
+
+    palingBoros =
+      "Shift 1";
+
+  }
+
+  else if(
+    shifts[1].boros >
+    shifts[0].boros
+  ){
+
+    palingBoros =
+      "Shift 2";
+
+  }
+
+  else if(
+    totalBoros > 0
+  ){
+
+    palingBoros =
+      "Sama";
+
+  }
+
+
+  let efisiensi = 0;
+
+
+  if(totalReal > 0){
+
+    efisiensi =
+      (
+        totalIdeal /
+        totalReal
+      ) * 100;
+
+  }
+
+
+  efisiensi =
+    Math.max(
+      0,
+      Math.min(
+        100,
+        efisiensi
+      )
+    );
+
 
   set(
     "tPotong",
     totalPotong
-    .toLocaleString("id-ID")
-    + " ptg"
+      .toLocaleString("id-ID")
   );
 
 
@@ -1822,202 +2178,854 @@ function hitung(){
   );
 
 
-  /*
-    RUGI
-
-    Jika boros negatif,
-    tidak dianggap rugi.
-  */
-
-  const rugi =
-    Math.max(
-      0,
-      totalBoros
-    )
-    *
-    hargaPerMl;
-
-
   set(
     "tRugi",
     money(rugi)
   );
 
 
-  /*
-    RATA-RATA
-  */
-
-  const rata =
-    totalPotong > 0
-      ? totalReal / totalPotong
-      : 0;
-
-
   set(
     "tRata",
-    rata.toFixed(1)
-    + " ml/ptg"
+
+    totalPotong > 0
+
+      ? rata.toFixed(1)
+        + " ml"
+
+      : "-"
   );
 
 
-  /*
-    SHIFT PALING BOROS
-
-    Berdasarkan ml/ayam
-  */
-
-  const aktif =
-    shiftData.filter(
-      x => x.potong > 0
-    );
+  set(
+    "tPaling",
+    palingBoros
+  );
 
 
-  if(aktif.length){
-
-    aktif.sort(
-      (a,b) =>
-        b.perAyam - a.perAyam
-    );
-
-
-    set(
-      "tPaling",
-      "SHIFT "
-      + aktif[0].shift
-      + " • "
-      + aktif[0].perAyam.toFixed(1)
-      + " ml"
-    );
-
-  }
-  else{
-
-    set(
-      "tPaling",
-      "-"
-    );
-
-  }
-
-
-  /*
-    EFISIENSI
-
-    100% jika tepat 19ml.
-
-    Jika lebih boros,
-    persentase turun.
-  */
-
-  let efficiency = 0;
-
-
-  if(totalPotong > 0){
-
-    efficiency =
-      (
-        totalIdeal /
-        totalReal
-      )
-      * 100;
-
-    efficiency =
-      Math.min(
-        100,
-        efficiency
-      );
-
-  }
+  set(
+    "tStokAkhir",
+    ml(previousSisa)
+  );
 
 
   set(
     "effText",
-    efficiency.toFixed(0)
-    + "%"
+    efisiensi.toFixed(1)
+      + "%"
   );
 
 
-  document.getElementById(
-    "progressBar"
-  ).style.width =
-    efficiency + "%";
+  document
+    .getElementById(
+      "progressBar"
+    )
+    .style.width =
+      efisiensi + "%";
 
 
-  /*
-    SIMPAN HASIL TERAKHIR
-  */
+  return {
 
-  window.lastCalculation = {
+    hargaLiter:
+      data.hargaLiter,
 
-    hargaLiter,
+    stokAwal:
+      data.stokAwal,
 
-    stokAwal,
+    totalPotong:
+      totalPotong,
 
-    totalPotong,
+    totalIdeal:
+      totalIdeal,
 
-    totalIdeal,
+    totalReal:
+      totalReal,
 
-    totalReal,
+    totalBoros:
+      totalBoros,
 
-    totalBoros,
+    rugi:
+      rugi,
 
-    rugi,
+    rata:
+      rata,
 
-    rata,
+    palingBoros:
+      palingBoros,
 
-    shiftData,
+    efisiensi:
+      efisiensi,
 
-    waktu:
-      new Date().toLocaleString(
-        "id-ID"
-      )
+    stokAkhir:
+      previousSisa,
+
+    shifts:
+      shifts
 
   };
 
 }
 
 
-// =============================================
-// SIMPAN HARI INI
-// =============================================
+/* =========================================
+   AUTOSAVE
+========================================= */
 
-function simpanHari(){
+function autoSave(){
 
-  hitung();
-
-
-  const old =
-    JSON.parse(
-      localStorage.getItem(STORAGE)
-      || "[]"
-    );
+  const data =
+    ambilData();
 
 
-  old.push(
-    window.lastCalculation
-  );
+  const current = {
+
+    tanggal:
+      todayKey(),
+
+    waktu:
+      new Date()
+        .toISOString(),
+
+    data:
+      data,
+
+    locked:
+      getLockStatus()
+
+  };
 
 
   localStorage.setItem(
-    STORAGE,
-    JSON.stringify(old)
+    DAY_STORAGE,
+    JSON.stringify(current)
   );
 
 
-  renderHistory();
+  document
+    .getElementById(
+      "terakhirSimpan"
+    )
+    .innerText =
+      new Date()
+        .toLocaleTimeString(
+          "id-ID",
+          {
+            hour:"2-digit",
+            minute:"2-digit"
+          }
+        );
+
+}
 
 
-  alert(
-    "Hasil hari ini berhasil disimpan."
+/* =========================================
+   LOAD AUTOSAVE
+========================================= */
+
+function loadCurrentDay(){
+
+  const saved =
+    JSON.parse(
+      localStorage.getItem(
+        DAY_STORAGE
+      ) || "null"
+    );
+
+
+  if(
+    !saved ||
+    saved.tanggal !== todayKey()
+  ){
+
+    buatHariBaruOtomatis();
+
+    return;
+
+  }
+
+
+  const d =
+    saved.data;
+
+
+  document.getElementById(
+    "hargaLiter"
+  ).value =
+    d.hargaLiter;
+
+
+  document.getElementById(
+    "stokAwal"
+  ).value =
+    d.stokAwal;
+
+
+  document.getElementById(
+    "ptg1"
+  ).value =
+    d.shift1.potong;
+
+
+  document.getElementById(
+    "masuk1"
+  ).value =
+    d.shift1.masuk;
+
+
+  document.getElementById(
+    "sisa1"
+  ).value =
+    d.shift1.sisa;
+
+
+  document.getElementById(
+    "ket1"
+  ).value =
+    d.shift1.keterangan || "";
+
+
+  document.getElementById(
+    "ptg2"
+  ).value =
+    d.shift2.potong;
+
+
+  document.getElementById(
+    "masuk2"
+  ).value =
+    d.shift2.masuk;
+
+
+  document.getElementById(
+    "sisa2"
+  ).value =
+    d.shift2.sisa;
+
+
+  document.getElementById(
+    "ket2"
+  ).value =
+    d.shift2.keterangan || "";
+
+
+  setLockStatus(
+    saved.locked || false
+  );
+
+
+  hitung();
+
+}
+
+
+/* =========================================
+   BUAT HARI BARU OTOMATIS
+========================================= */
+
+function buatHariBaruOtomatis(){
+
+  const riwayat =
+    JSON.parse(
+      localStorage.getItem(
+        STORAGE
+      ) || "[]"
+    );
+
+
+  let stokBesok = 0;
+
+  let harga =
+    16500;
+
+
+  if(riwayat.length > 0){
+
+    const terakhir =
+      riwayat[0];
+
+
+    stokBesok =
+      Number(
+        terakhir.stokAkhir
+      ) || 0;
+
+
+    harga =
+      Number(
+        terakhir.hargaLiter
+      ) || 16500;
+
+  }
+
+
+  document.getElementById(
+    "hargaLiter"
+  ).value =
+    harga;
+
+
+  document.getElementById(
+    "stokAwal"
+  ).value =
+    stokBesok;
+
+
+  resetShiftInputs();
+
+
+  localStorage.setItem(
+    LOCK_STORAGE,
+    "false"
+  );
+
+
+  autoSave();
+
+}
+
+
+/* =========================================
+   RESET SHIFT
+========================================= */
+
+function resetShiftInputs(){
+
+  document.getElementById(
+    "ptg1"
+  ).value = 0;
+
+  document.getElementById(
+    "masuk1"
+  ).value = 0;
+
+  document.getElementById(
+    "sisa1"
+  ).value = 0;
+
+  document.getElementById(
+    "ket1"
+  ).value = "";
+
+
+  document.getElementById(
+    "ptg2"
+  ).value = 0;
+
+  document.getElementById(
+    "masuk2"
+  ).value = 0;
+
+  document.getElementById(
+    "sisa2"
+  ).value = 0;
+
+  document.getElementById(
+    "ket2"
+  ).value = "";
+
+}
+
+
+/* =========================================
+   LOCK STATUS
+========================================= */
+
+function getLockStatus(){
+
+  return (
+    localStorage.getItem(
+      LOCK_STORAGE
+    ) === "true"
   );
 
 }
 
 
-// =============================================
-// RIWAYAT
-// =============================================
+function setLockStatus(locked){
+
+  localStorage.setItem(
+    LOCK_STORAGE,
+    locked
+      ? "true"
+      : "false"
+  );
+
+
+  const ids = [
+    "ptg1",
+    "masuk1",
+    "sisa1",
+    "ket1"
+  ];
+
+
+  ids.forEach(id=>{
+
+    document
+      .getElementById(id)
+      .disabled =
+        locked;
+
+  });
+
+
+  const status =
+    document.getElementById(
+      "lockStatus"
+    );
+
+
+  const button =
+    document.getElementById(
+      "lockButton"
+    );
+
+
+  if(locked){
+
+    status.className =
+      "lockStatus locked";
+
+    status.innerText =
+      "🔒 SHIFT 1 TERKUNCI";
+
+    button.className =
+      "lockBtn unlock";
+
+    button.innerText =
+      "🔓 BUKA KUNCI";
+
+  }
+
+  else{
+
+    status.className =
+      "lockStatus unlocked";
+
+    status.innerText =
+      "🔓 SHIFT 1 TERBUKA";
+
+    button.className =
+      "lockBtn lock";
+
+    button.innerText =
+      "🔒 KUNCI";
+
+  }
+
+}
+
+
+function toggleLock(){
+
+  const locked =
+    getLockStatus();
+
+
+  if(!locked){
+
+    const data =
+      ambilData();
+
+
+    if(
+      data.shift1.potong <= 0 &&
+      data.shift1.masuk <= 0 &&
+      data.shift1.sisa <= 0
+    ){
+
+      alert(
+        "Isi data Shift 1 terlebih dahulu."
+      );
+
+      return;
+
+    }
+
+
+    if(
+      !confirm(
+        "Kunci Shift 1 sekarang?"
+      )
+    ){
+
+      return;
+
+    }
+
+
+    setLockStatus(true);
+
+    autoSave();
+
+  }
+
+  else{
+
+    if(
+      !confirm(
+        "Buka kunci Shift 1?"
+      )
+    ){
+
+      return;
+
+    }
+
+
+    setLockStatus(false);
+
+    autoSave();
+
+  }
+
+}
+
+
+/* =========================================
+   STOK KEMARIN
+========================================= */
+
+function gunakanStokKemarin(){
+
+  const riwayat =
+    JSON.parse(
+      localStorage.getItem(
+        STORAGE
+      ) || "[]"
+    );
+
+
+  if(
+    riwayat.length === 0
+  ){
+
+    alert(
+      "Belum ada stok dari hari sebelumnya."
+    );
+
+    return;
+
+  }
+
+
+  const stok =
+    Number(
+      riwayat[0].stokAkhir
+    ) || 0;
+
+
+  document.getElementById(
+    "stokAwal"
+  ).value =
+    stok;
+
+
+  hitung();
+
+  autoSave();
+
+
+  alert(
+    "✓ Stok awal diubah menjadi "
+    + ml(stok)
+  );
+
+}
+
+
+/* =========================================
+   SIMPAN HARI
+========================================= */
+
+function simpanHari(){
+
+  const data =
+    hitung();
+
+
+  if(
+    data.totalPotong <= 0
+  ){
+
+    alert(
+      "Masukkan jumlah potong ayam terlebih dahulu."
+    );
+
+    return;
+
+  }
+
+
+  const riwayat =
+    JSON.parse(
+      localStorage.getItem(
+        STORAGE
+      ) || "[]"
+    );
+
+
+  const now =
+    new Date();
+
+
+  const item = {
+
+    id:
+      Date.now(),
+
+    tanggal:
+      todayText(),
+
+    tanggalKey:
+      todayKey(),
+
+    jam:
+      now.toLocaleTimeString(
+        "id-ID",
+        {
+          hour:"2-digit",
+          minute:"2-digit"
+        }
+      ),
+
+    hargaLiter:
+      data.hargaLiter,
+
+    stokAwal:
+      data.stokAwal,
+
+    stokAkhir:
+      data.stokAkhir,
+
+    totalPotong:
+      data.totalPotong,
+
+    totalIdeal:
+      data.totalIdeal,
+
+    totalReal:
+      data.totalReal,
+
+    totalBoros:
+      data.totalBoros,
+
+    rugi:
+      data.rugi,
+
+    rata:
+      data.rata,
+
+    palingBoros:
+      data.palingBoros,
+
+    efisiensi:
+      data.efisiensi,
+
+    shifts:
+      data.shifts
+
+  };
+
+
+  /*
+    Jika hari yang sama sudah pernah
+    disimpan, update data tersebut.
+  */
+
+  const index =
+    riwayat.findIndex(
+      x =>
+        x.tanggalKey ===
+        todayKey()
+    );
+
+
+  if(index >= 0){
+
+    riwayat[index] =
+      item;
+
+  }
+
+  else{
+
+    riwayat.unshift(
+      item
+    );
+
+  }
+
+
+  riwayat.sort(
+    (a,b)=>
+      b.id - a.id
+  );
+
+
+  localStorage.setItem(
+    STORAGE,
+    JSON.stringify(riwayat)
+  );
+
+
+  /*
+    Stok akhir hari ini
+    disimpan untuk besok.
+  */
+
+  localStorage.setItem(
+    "golqi_next_stock_v3",
+    String(
+      data.stokAkhir
+    )
+  );
+
+
+  autoSave();
+
+  renderHistory();
+
+  updateStats();
+
+
+  alert(
+    "✓ Hasil hari ini berhasil disimpan.\n\n"
+    +
+    "Stok akhir "
+    +
+    ml(data.stokAkhir)
+    +
+    " akan otomatis menjadi stok awal besok."
+  );
+
+}
+
+
+/* =========================================
+   MULAI HARI BARU
+========================================= */
+
+function mulaiHariBaru(){
+
+  const current =
+    hitung();
+
+
+  if(
+    current.totalPotong > 0
+  ){
+
+    if(
+      !confirm(
+        "Data hari ini sudah berisi.\n\n"
+        +
+        "Pastikan hasil hari ini sudah disimpan.\n\n"
+        +
+        "Mulai hari baru?"
+      )
+    ){
+
+      return;
+
+    }
+
+  }
+
+
+  const stokBesok =
+    current.stokAkhir;
+
+
+  const harga =
+    get("hargaLiter");
+
+
+  document.getElementById(
+    "stokAwal"
+  ).value =
+    stokBesok;
+
+
+  document.getElementById(
+    "hargaLiter"
+  ).value =
+    harga;
+
+
+  resetShiftInputs();
+
+
+  setLockStatus(false);
+
+
+  hitung();
+
+  autoSave();
+
+
+  alert(
+    "🌅 Hari baru dimulai.\n\n"
+    +
+    "Stok awal otomatis: "
+    +
+    ml(stokBesok)
+  );
+
+}
+
+
+/* =========================================
+   RESET INPUT
+========================================= */
+
+function resetInput(){
+
+  if(
+    !confirm(
+      "Reset semua input hari ini?"
+    )
+  ){
+
+    return;
+
+  }
+
+
+  const stok =
+    get("stokAwal");
+
+  const harga =
+    get("hargaLiter");
+
+
+  resetShiftInputs();
+
+
+  document.getElementById(
+    "stokAwal"
+  ).value =
+    stok;
+
+
+  document.getElementById(
+    "hargaLiter"
+  ).value =
+    harga;
+
+
+  setLockStatus(false);
+
+
+  hitung();
+
+  autoSave();
+
+}
+
+
+/* =========================================
+   RIWAYAT
+========================================= */
 
 function renderHistory(){
 
@@ -2027,17 +3035,24 @@ function renderHistory(){
     );
 
 
-  const data =
+  const riwayat =
     JSON.parse(
-      localStorage.getItem(STORAGE)
-      || "[]"
+      localStorage.getItem(
+        STORAGE
+      ) || "[]"
     );
 
 
-  if(!data.length){
+  if(
+    riwayat.length === 0
+  ){
 
     history.innerHTML =
-      "Belum ada riwayat.";
+      `
+      <div class="empty">
+        Belum ada riwayat.
+      </div>
+      `;
 
     return;
 
@@ -2045,212 +3060,603 @@ function renderHistory(){
 
 
   history.innerHTML =
-    "";
+    riwayat
+      .map(item=>{
+
+        return `
+
+        <div class="historyItem">
+
+          <div class="historyTop">
+
+            <span>
+              📅 ${item.tanggal}
+            </span>
+
+            <span>
+              ${item.jam}
+            </span>
+
+          </div>
 
 
-  /*
-    Tampilkan terbaru
-    terlebih dahulu
-  */
+          <div class="historyDate">
 
-  data
-    .slice()
-    .reverse()
-    .forEach(
-      function(item,index){
+            Harga:
+            ${money(item.hargaLiter)}
+            /liter
 
-        history.innerHTML += `
+            <br>
 
-          <div class="historyItem">
+            Stok awal:
+            ${ml(item.stokAwal)}
 
-            <div class="historyTop">
+            <br>
 
-              <span>
-                HARI ${data.length-index}
-              </span>
+            Stok akhir:
+            ${ml(item.stokAkhir)}
 
-              <span class="historyDate">
-                ${item.waktu}
-              </span>
+          </div>
+
+
+          <div class="historyGrid">
+
+            <div>
+
+              <small>
+                TOTAL POTONG
+              </small>
+
+              <b>
+                ${item.totalPotong
+                  .toLocaleString("id-ID")}
+              </b>
 
             </div>
 
 
-            <div class="historyGrid">
+            <div>
 
-              <div>
+              <small>
+                IDEAL
+              </small>
 
-                <small>
-                  POTONG
-                </small>
+              <b>
+                ${ml(item.totalIdeal)}
+              </b>
 
-                <b>
-                  ${item.totalPotong}
-                </b>
-
-              </div>
+            </div>
 
 
-              <div>
+            <div>
 
-                <small>
-                  REAL
-                </small>
+              <small>
+                REAL
+              </small>
 
-                <b>
-                  ${Math.round(item.totalReal)} ml
-                </b>
+              <b>
+                ${ml(item.totalReal)}
+              </b>
 
-              </div>
+            </div>
 
 
-              <div>
+            <div>
 
-                <small>
-                  BOROS
-                </small>
+              <small>
+                TOTAL BOROS
+              </small>
 
-                <b>
-                  ${Math.round(item.totalBoros)} ml
-                </b>
+              <b>
+                ${ml(item.totalBoros)}
+              </b>
 
-              </div>
+            </div>
+
+
+            <div>
+
+              <small>
+                RUGI
+              </small>
+
+              <b>
+                ${money(item.rugi)}
+              </b>
+
+            </div>
+
+
+            <div>
+
+              <small>
+                RATA-RATA
+              </small>
+
+              <b>
+                ${item.rata.toFixed(1)}
+                ml/ptg
+              </b>
 
             </div>
 
           </div>
 
+
+          <!-- SHIFT 1 -->
+
+          <div class="historyShift">
+
+            <div class="historyShiftTitle">
+              🔴 SHIFT 1
+            </div>
+
+
+            <div class="historyShiftLine">
+
+              <span>
+                Potong
+              </span>
+
+              <b>
+                ${item.shifts[0].potong}
+              </b>
+
+            </div>
+
+
+            <div class="historyShiftLine">
+
+              <span>
+                Minyak Masuk
+              </span>
+
+              <b>
+                ${ml(item.shifts[0].masuk)}
+              </b>
+
+            </div>
+
+
+            <div class="historyShiftLine">
+
+              <span>
+                Ideal
+              </span>
+
+              <b>
+                ${ml(item.shifts[0].ideal)}
+              </b>
+
+            </div>
+
+
+            <div class="historyShiftLine">
+
+              <span>
+                Real
+              </span>
+
+              <b>
+                ${ml(item.shifts[0].real)}
+              </b>
+
+            </div>
+
+
+            <div class="historyShiftLine">
+
+              <span>
+                Boros
+              </span>
+
+              <b>
+                ${ml(item.shifts[0].boros)}
+              </b>
+
+            </div>
+
+
+            <div class="historyShiftLine">
+
+              <span>
+                Rata-rata
+              </span>
+
+              <b>
+                ${item.shifts[0]
+                  .perAyam
+                  .toFixed(1)}
+                ml/ptg
+              </b>
+
+            </div>
+
+
+            <div class="historyShiftLine">
+
+              <span>
+                Sisa
+              </span>
+
+              <b>
+                ${ml(item.shifts[0].sisa)}
+              </b>
+
+            </div>
+
+
+          </div>
+
+
+          <!-- SHIFT 2 -->
+
+          <div class="historyShift">
+
+            <div class="historyShiftTitle">
+              🔴 SHIFT 2
+            </div>
+
+
+            <div class="historyShiftLine">
+
+              <span>
+                Potong
+              </span>
+
+              <b>
+                ${item.shifts[1].potong}
+              </b>
+
+            </div>
+
+
+            <div class="historyShiftLine">
+
+              <span>
+                Minyak Masuk
+              </span>
+
+              <b>
+                ${ml(item.shifts[1].masuk)}
+              </b>
+
+            </div>
+
+
+            <div class="historyShiftLine">
+
+              <span>
+                Ideal
+              </span>
+
+              <b>
+                ${ml(item.shifts[1].ideal)}
+              </b>
+
+            </div>
+
+
+            <div class="historyShiftLine">
+
+              <span>
+                Real
+              </span>
+
+              <b>
+                ${ml(item.shifts[1].real)}
+              </b>
+
+            </div>
+
+
+            <div class="historyShiftLine">
+
+              <span>
+                Boros
+              </span>
+
+              <b>
+                ${ml(item.shifts[1].boros)}
+              </b>
+
+            </div>
+
+
+            <div class="historyShiftLine">
+
+              <span>
+                Rata-rata
+              </span>
+
+              <b>
+                ${item.shifts[1]
+                  .perAyam
+                  .toFixed(1)}
+                ml/ptg
+              </b>
+
+            </div>
+
+
+            <div class="historyShiftLine">
+
+              <span>
+                Sisa
+              </span>
+
+              <b>
+                ${ml(item.shifts[1].sisa)}
+              </b>
+
+            </div>
+
+
+          </div>
+
+
+          <div class="historyDate">
+
+            🔥 Shift paling boros:
+            <b>
+              ${item.palingBoros}
+            </b>
+
+            <br>
+
+            📊 Efisiensi:
+            <b>
+              ${item.efisiensi.toFixed(1)}%
+            </b>
+
+          </div>
+
+
+          <button
+            class="historyDelete"
+            onclick="hapusRiwayat(${item.id})"
+          >
+            🗑️ HAPUS RIWAYAT INI
+          </button>
+
+        </div>
+
         `;
 
-      }
-    );
+      })
+      .join("");
 
 }
 
 
-// =============================================
-// RESET
-// =============================================
+/* =========================================
+   HAPUS SATU RIWAYAT
+========================================= */
 
-function resetData(){
+function hapusRiwayat(id){
 
-  const yakin =
-    confirm(
-      "Reset semua input?"
-    );
-
-
-  if(!yakin){
+  if(
+    !confirm(
+      "Hapus riwayat ini?"
+    )
+  ){
 
     return;
 
   }
 
 
-  document
-    .querySelectorAll(
-      "input"
-    )
-    .forEach(
-      function(input){
-
-        if(
-          input.id ===
-          "hargaLiter"
-        ){
-
-          input.value =
-            16500;
-
-        }
-
-        else if(
-          input.id ===
-          "stokAwal"
-        ){
-
-          input.value =
-            5000;
-
-        }
-
-        else if(
-          input.id.startsWith(
-            "sisa"
-          )
-        ){
-
-          input.value =
-            0;
-
-        }
-
-        else{
-
-          input.value =
-            0;
-
-        }
-
-      }
+  let riwayat =
+    JSON.parse(
+      localStorage.getItem(
+        STORAGE
+      ) || "[]"
     );
 
 
-  /*
-    Default contoh
-  */
-
-  document.getElementById(
-    "ptg1"
-  ).value = 42;
-
-  document.getElementById(
-    "sisa1"
-  ).value = 4200;
-
-  document.getElementById(
-    "ptg2"
-  ).value = 47;
-
-  document.getElementById(
-    "sisa2"
-  ).value = 3300;
+  riwayat =
+    riwayat.filter(
+      item =>
+        item.id !== id
+    );
 
 
-  hitung();
+  localStorage.setItem(
+    STORAGE,
+    JSON.stringify(
+      riwayat
+    )
+  );
+
+
+  renderHistory();
+
+  updateStats();
 
 }
 
 
-// =============================================
-// EVENT
-// =============================================
+/* =========================================
+   HAPUS SEMUA RIWAYAT
+========================================= */
 
-document
-  .querySelectorAll(
-    "input"
-  )
-  .forEach(
-    function(input){
+function hapusSemuaRiwayat(){
 
-      input.addEventListener(
-        "input",
-        hitung
-      );
+  const riwayat =
+    JSON.parse(
+      localStorage.getItem(
+        STORAGE
+      ) || "[]"
+    );
 
-    }
+
+  if(
+    riwayat.length === 0
+  ){
+
+    alert(
+      "Belum ada riwayat."
+    );
+
+    return;
+
+  }
+
+
+  if(
+    !confirm(
+      "Yakin ingin menghapus SEMUA riwayat?"
+    )
+  ){
+
+    return;
+
+  }
+
+
+  localStorage.removeItem(
+    STORAGE
   );
 
 
-// =============================================
-// START
-// =============================================
+  renderHistory();
 
-hitung();
+  updateStats();
 
-renderHistory();
+}
+
+
+/* =========================================
+   STATISTIK
+========================================= */
+
+function updateStats(){
+
+  const riwayat =
+    JSON.parse(
+      localStorage.getItem(
+        STORAGE
+      ) || "[]"
+    );
+
+
+  let totalPotong = 0;
+
+  let totalBoros = 0;
+
+  let totalRugi = 0;
+
+
+  riwayat.forEach(item=>{
+
+    totalPotong +=
+      Number(
+        item.totalPotong
+      ) || 0;
+
+
+    totalBoros +=
+      Number(
+        item.totalBoros
+      ) || 0;
+
+
+    totalRugi +=
+      Number(
+        item.rugi
+      ) || 0;
+
+  });
+
+
+  set(
+    "statHari",
+    riwayat.length
+      + " hari"
+  );
+
+
+  set(
+    "statPotong",
+    totalPotong
+      .toLocaleString(
+        "id-ID"
+      )
+      + " potong"
+  );
+
+
+  set(
+    "statBoros",
+    ml(totalBoros)
+  );
+
+
+  set(
+    "statRugi",
+    money(totalRugi)
+  );
+
+}
+
+
+/* =========================================
+   INFO HARI
+========================================= */
+
+function updateDayInfo(){
+
+  set(
+    "hariAktif",
+    todayText()
+  );
+
+
+  set(
+    "infoStokAwal",
+    ml(
+      get("stokAwal")
+    )
+  );
+
+}
+
+
+/* =========================================
+   INIT
+========================================= */
+
+window.addEventListener(
+  "load",
+  ()=>{
+
+    loadCurrentDay();
+
+    updateDayInfo();
+
+    hitung();
+
+    renderHistory();
+
+    updateStats();
+
+  }
+);
+
+
+/* =========================================
+   UPDATE INFO SETIAP INPUT
+========================================= */
+
+setInterval(
+  ()=>{
+    updateDayInfo();
+  },
+  1000
+);
 
 </script>
 
 </body>
+
 </html>
