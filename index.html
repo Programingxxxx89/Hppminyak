@@ -55,7 +55,6 @@ body{
     );
 
   color:var(--ink);
-
   min-height:100vh;
 }
 
@@ -63,23 +62,15 @@ body{
   width:100%;
   max-width:520px;
   margin:auto;
-
-  padding:
-    14px
-    14px
-    40px;
+  padding:14px 14px 40px;
 }
 
-
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 .header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-
   margin-bottom:14px;
 }
 
@@ -105,9 +96,7 @@ body{
     );
 
   color:white;
-
   border-radius:14px;
-
   font-size:22px;
 
   box-shadow:
@@ -117,42 +106,27 @@ body{
 
 .logoText h1{
   margin:0;
-
   font-size:20px;
-
   font-weight:900;
 }
 
 .logoText p{
   margin:2px 0 0;
-
   color:var(--muted);
-
   font-size:10px;
 }
 
 .badge{
   background:var(--red);
-
   color:white;
-
-  padding:
-    8px
-    10px;
-
+  padding:8px 10px;
   border-radius:12px;
-
   font-size:9px;
-
   font-weight:900;
-
   text-align:center;
 }
 
-
-/* =========================
-   CARD
-========================= */
+/* CARD */
 
 .card{
   background:white;
@@ -162,9 +136,7 @@ body{
     var(--border);
 
   border-radius:20px;
-
   padding:15px;
-
   margin-bottom:12px;
 
   box-shadow:
@@ -174,39 +146,25 @@ body{
 
 .cardTitle{
   font-size:15px;
-
   font-weight:900;
-
   margin-bottom:13px;
 }
 
-
-/* =========================
-   FIELD
-========================= */
+/* FIELD */
 
 .row{
   display:grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns:1fr 1fr;
   gap:9px;
-
   margin-bottom:10px;
 }
 
 .field label{
   display:block;
-
   font-size:9px;
-
   font-weight:900;
-
   color:#777;
-
   margin-bottom:5px;
-
   text-transform:uppercase;
 }
 
@@ -218,19 +176,14 @@ body{
     #E8E8E8;
 
   background:#FAFAFA;
-
   border-radius:11px;
 
-  padding:
-    11px
-    10px;
+  padding:11px 10px;
 
   outline:none;
 
   font-size:14px;
-
   font-weight:800;
-
   color:#222;
 
   transition:.2s;
@@ -238,7 +191,6 @@ body{
 
 .field input:focus{
   border-color:var(--red);
-
   background:white;
 
   box-shadow:
@@ -248,18 +200,12 @@ body{
 
 .field input:disabled{
   background:#F1F1F1;
-
   color:#777;
-
   cursor:not-allowed;
-
   border-color:#DDD;
 }
 
-
-/* =========================
-   DAY INFO
-========================= */
+/* DAY INFO */
 
 .dayInfo{
   background:#FFF7F7;
@@ -269,13 +215,10 @@ body{
     #F3DADA;
 
   border-radius:13px;
-
   padding:10px;
-
   margin-bottom:12px;
 
   font-size:10px;
-
   font-weight:800;
 }
 
@@ -283,10 +226,7 @@ body{
   color:var(--red);
 }
 
-
-/* =========================
-   SHIFT
-========================= */
+/* SHIFT */
 
 .shiftCard{
   border:
@@ -294,9 +234,7 @@ body{
     #F0D0D0;
 
   border-radius:17px;
-
   padding:13px;
-
   margin-top:12px;
 
   background:
@@ -309,50 +247,34 @@ body{
 
 .shiftHead{
   display:flex;
-
   justify-content:space-between;
-
   align-items:center;
-
   gap:8px;
-
   margin-bottom:11px;
 }
 
 .shiftName{
   font-size:13px;
-
   font-weight:900;
-
   color:var(--red);
 }
 
 .shiftInfo{
   font-size:9px;
-
   color:#999;
-
   font-weight:700;
-
   text-align:right;
 }
 
-
-/* =========================
-   LOCK
-========================= */
+/* LOCK */
 
 .lockBox{
   display:flex;
-
   align-items:center;
-
   justify-content:space-between;
-
   gap:8px;
 
   margin-bottom:11px;
-
   padding:9px;
 
   border-radius:11px;
@@ -366,7 +288,6 @@ body{
 
 .lockStatus{
   font-size:9px;
-
   font-weight:900;
 }
 
@@ -380,36 +301,24 @@ body{
 
 .lockBtn{
   border:none;
-
   border-radius:9px;
-
-  padding:
-    8px
-    10px;
-
+  padding:8px 10px;
   font-size:9px;
-
   font-weight:900;
-
   cursor:pointer;
 }
 
 .lockBtn.lock{
   background:#FFECEC;
-
   color:var(--danger);
 }
 
 .lockBtn.unlock{
   background:#ECFDF3;
-
   color:var(--green);
 }
 
-
-/* =========================
-   BUTTON
-========================= */
+/* BUTTON */
 
 .btn{
   width:100%;
@@ -426,13 +335,10 @@ body{
   color:white;
 
   border-radius:14px;
-
   padding:14px;
-
   margin-top:8px;
 
   font-size:13px;
-
   font-weight:900;
 
   cursor:pointer;
@@ -450,9 +356,7 @@ body{
 
 .btnSecondary{
   background:#FFF0F0;
-
   color:var(--red);
-
   box-shadow:none;
 
   border:
@@ -462,9 +366,7 @@ body{
 
 .btnDanger{
   background:#FFF0F0;
-
   color:var(--danger);
-
   box-shadow:none;
 
   border:
@@ -472,27 +374,18 @@ body{
     #FFD0D0;
 }
 
-
-/* =========================
-   KPI
-========================= */
+/* KPI */
 
 .kpi{
   display:grid;
-
-  grid-template-columns:
-    1fr 1fr 1fr;
-
+  grid-template-columns:1fr 1fr 1fr;
   gap:7px;
-
   margin-top:9px;
 }
 
 .k{
   min-height:67px;
-
   border-radius:13px;
-
   padding:9px;
 
   border:
@@ -504,65 +397,44 @@ body{
 
 .kTitle{
   font-size:8px;
-
   color:#999;
-
   font-weight:800;
-
   margin-bottom:4px;
 }
 
 .kValue{
   font-size:12px;
-
   font-weight:900;
-
   line-height:1.3;
 }
 
-
-/* =========================
-   STATUS
-========================= */
+/* STATUS */
 
 .status{
   margin-top:9px;
-
-  padding:
-    8px
-    10px;
-
+  padding:8px 10px;
   border-radius:11px;
-
   font-size:10px;
-
   font-weight:900;
-
   text-align:center;
 }
 
 .status.hemat{
   color:var(--green);
-
   background:#ECFDF3;
 }
 
 .status.normal{
   color:var(--orange);
-
   background:#FFF7E8;
 }
 
 .status.boros{
   color:var(--danger);
-
   background:#FFF0F0;
 }
 
-
-/* =========================
-   TOTAL
-========================= */
+/* TOTAL */
 
 .totalBox{
   background:
@@ -575,7 +447,6 @@ body{
   color:white;
 
   border-radius:19px;
-
   padding:15px;
 
   box-shadow:
@@ -585,21 +456,16 @@ body{
 
 .totalTitle{
   font-size:13px;
-
   font-weight:900;
-
   margin-bottom:8px;
 }
 
 .trow{
   display:flex;
-
   justify-content:space-between;
-
   align-items:center;
 
-  padding:
-    9px 0;
+  padding:9px 0;
 
   border-bottom:
     1px solid
@@ -616,10 +482,7 @@ body{
   font-weight:900;
 }
 
-
-/* =========================
-   PROGRESS
-========================= */
+/* PROGRESS */
 
 .progressBox{
   margin-top:12px;
@@ -627,31 +490,23 @@ body{
 
 .progressLabel{
   display:flex;
-
   justify-content:space-between;
 
   font-size:10px;
-
   font-weight:800;
-
   margin-bottom:5px;
 }
 
 .progress{
   width:100%;
-
   height:9px;
-
   background:#EEE;
-
   border-radius:99px;
-
   overflow:hidden;
 }
 
 .progressBar{
   height:100%;
-
   width:0%;
 
   background:
@@ -663,27 +518,19 @@ body{
     );
 
   border-radius:99px;
-
   transition:.4s;
 }
 
-
-/* =========================
-   STATS
-========================= */
+/* STATS */
 
 .stats{
   display:grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns:1fr 1fr;
   gap:8px;
 }
 
 .stat{
   border-radius:14px;
-
   padding:11px;
 
   background:#FAF5F5;
@@ -695,26 +542,18 @@ body{
 
 .stat small{
   display:block;
-
   color:#999;
-
   font-size:8px;
-
   font-weight:800;
 }
 
 .stat b{
   display:block;
-
   margin-top:4px;
-
   font-size:13px;
 }
 
-
-/* =========================
-   HISTORY
-========================= */
+/* HISTORY */
 
 .historyItem{
   border:
@@ -722,9 +561,7 @@ body{
     #F0E0E0;
 
   border-radius:14px;
-
   padding:11px;
-
   margin-bottom:9px;
 
   background:#FFFDFD;
@@ -732,66 +569,48 @@ body{
 
 .historyTop{
   display:flex;
-
   justify-content:space-between;
-
   gap:10px;
 
   font-size:11px;
-
   font-weight:900;
 }
 
 .historyDate{
   color:#999;
-
   font-size:9px;
-
   margin-top:3px;
 }
 
 .historyGrid{
   display:grid;
-
-  grid-template-columns:
-    repeat(2,1fr);
-
+  grid-template-columns:repeat(2,1fr);
   gap:6px;
-
   margin-top:9px;
 }
 
 .historyGrid div{
   background:#FAF5F5;
-
   border-radius:9px;
-
   padding:8px;
-
   text-align:center;
 }
 
 .historyGrid small{
   display:block;
-
   font-size:7px;
-
   color:#999;
 }
 
 .historyGrid b{
   display:block;
-
   font-size:10px;
-
   margin-top:2px;
 }
 
 .historyShift{
   margin-top:9px;
-
   border-radius:10px;
-
   padding:8px;
 
   background:#FFF7F7;
@@ -803,29 +622,22 @@ body{
 
 .historyShiftTitle{
   color:var(--red);
-
   font-size:9px;
-
   font-weight:900;
-
   margin-bottom:5px;
 }
 
 .historyShiftLine{
   display:flex;
-
   justify-content:space-between;
 
   font-size:9px;
-
   padding:2px 0;
 }
 
 .historyDelete{
   width:100%;
-
   margin-top:8px;
-
   padding:8px;
 
   border-radius:9px;
@@ -835,11 +647,9 @@ body{
     #FFD5D5;
 
   background:#FFF1F1;
-
   color:var(--danger);
 
   font-size:9px;
-
   font-weight:900;
 
   cursor:pointer;
@@ -847,43 +657,57 @@ body{
 
 .empty{
   padding:15px;
-
   text-align:center;
-
   color:#999;
-
   font-size:10px;
 }
 
+/* CLOUD STATUS */
 
-/* =========================
-   FOOTER
-========================= */
+.cloudStatus{
+  margin-top:8px;
+  padding:8px 10px;
+  border-radius:10px;
+
+  font-size:9px;
+  font-weight:900;
+  text-align:center;
+
+  background:#F3F4F6;
+  color:#666;
+}
+
+.cloudStatus.ok{
+  background:#ECFDF3;
+  color:#15803D;
+}
+
+.cloudStatus.loading{
+  background:#EFF6FF;
+  color:#2563EB;
+}
+
+.cloudStatus.error{
+  background:#FFF1F2;
+  color:#DC2626;
+}
+
+/* FOOTER */
 
 .footer{
   text-align:center;
-
   color:#999;
-
   font-size:9px;
-
   padding-top:8px;
 }
 
-
-/* =========================
-   DESKTOP
-========================= */
+/* DESKTOP */
 
 @media(min-width:700px){
 
   .app{
     max-width:850px;
-
-    padding:
-      25px
-      20px
-      50px;
+    padding:25px 20px 50px;
   }
 
   .desktopGrid{
@@ -894,7 +718,6 @@ body{
       .8fr;
 
     gap:14px;
-
     align-items:start;
   }
 
@@ -931,9 +754,7 @@ body{
 <div class="app">
 
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- HEADER -->
 
 <div class="header">
 
@@ -968,9 +789,7 @@ body{
 <div class="desktopGrid">
 
 
-<!-- =========================
-     INPUT
-========================= -->
+<!-- INPUT -->
 
 <div>
 
@@ -1002,6 +821,19 @@ body{
 
   </div>
 
+  <div
+    id="cloudStatus"
+    class="cloudStatus loading"
+  >
+    ☁️ Menghubungkan ke Firebase...
+  </div>
+
+</div>
+
+
+<!-- PENGATURAN -->
+
+<div class="card">
 
   <div class="cardTitle">
     ⚙️ Pengaturan Minyak
@@ -1021,7 +853,7 @@ body{
         type="number"
         value="16500"
         min="0"
-        oninput="hitung(); autoSave()"
+        oninput="hitung(); scheduleAutoSave()"
       >
 
     </div>
@@ -1038,7 +870,7 @@ body{
         type="number"
         value="5000"
         min="0"
-        oninput="hitung(); autoSave()"
+        oninput="hitung(); scheduleAutoSave()"
       >
 
     </div>
@@ -1056,9 +888,7 @@ body{
 </div>
 
 
-<!-- =========================
-     SHIFT 1
-========================= -->
+<!-- SHIFT 1 -->
 
 <div class="card">
 
@@ -1076,8 +906,6 @@ body{
 
     </div>
 
-
-    <!-- LOCK -->
 
     <div class="lockBox">
 
@@ -1100,6 +928,31 @@ body{
     </div>
 
 
+    <!-- NAMA KOKI -->
+
+    <div class="row">
+
+      <div
+        class="field"
+        style="grid-column:1 / -1"
+      >
+
+        <label>
+          Nama Koki Shift 1
+        </label>
+
+        <input
+          id="koki1"
+          type="text"
+          placeholder="Masukkan nama koki"
+          oninput="scheduleAutoSave()"
+        >
+
+      </div>
+
+    </div>
+
+
     <div class="row">
 
       <div class="field">
@@ -1113,7 +966,7 @@ body{
           type="number"
           value="0"
           min="0"
-          oninput="hitung(); autoSave()"
+          oninput="hitung(); scheduleAutoSave()"
         >
 
       </div>
@@ -1130,7 +983,7 @@ body{
           type="number"
           value="0"
           min="0"
-          oninput="hitung(); autoSave()"
+          oninput="hitung(); scheduleAutoSave()"
         >
 
       </div>
@@ -1151,7 +1004,7 @@ body{
           type="number"
           value="0"
           min="0"
-          oninput="hitung(); autoSave()"
+          oninput="hitung(); scheduleAutoSave()"
         >
 
       </div>
@@ -1167,7 +1020,7 @@ body{
           id="ket1"
           type="text"
           placeholder="Opsional"
-          oninput="autoSave()"
+          oninput="scheduleAutoSave()"
         >
 
       </div>
@@ -1237,9 +1090,7 @@ body{
   </div>
 
 
-<!-- =========================
-     SHIFT 2
-========================= -->
+<!-- SHIFT 2 -->
 
   <div class="shiftCard">
 
@@ -1251,6 +1102,31 @@ body{
 
       <div class="shiftInfo">
         Sisa Shift 1 → Awal Shift 2
+      </div>
+
+    </div>
+
+
+    <!-- NAMA KOKI -->
+
+    <div class="row">
+
+      <div
+        class="field"
+        style="grid-column:1 / -1"
+      >
+
+        <label>
+          Nama Koki Shift 2
+        </label>
+
+        <input
+          id="koki2"
+          type="text"
+          placeholder="Masukkan nama koki"
+          oninput="scheduleAutoSave()"
+        >
+
       </div>
 
     </div>
@@ -1269,7 +1145,7 @@ body{
           type="number"
           value="0"
           min="0"
-          oninput="hitung(); autoSave()"
+          oninput="hitung(); scheduleAutoSave()"
         >
 
       </div>
@@ -1286,7 +1162,7 @@ body{
           type="number"
           value="0"
           min="0"
-          oninput="hitung(); autoSave()"
+          oninput="hitung(); scheduleAutoSave()"
         >
 
       </div>
@@ -1307,7 +1183,7 @@ body{
           type="number"
           value="0"
           min="0"
-          oninput="hitung(); autoSave()"
+          oninput="hitung(); scheduleAutoSave()"
         >
 
       </div>
@@ -1323,7 +1199,7 @@ body{
           id="ket2"
           type="text"
           placeholder="Opsional"
-          oninput="autoSave()"
+          oninput="scheduleAutoSave()"
         >
 
       </div>
@@ -1421,9 +1297,7 @@ body{
 </div>
 
 
-<!-- =========================
-     HASIL
-========================= -->
+<!-- HASIL -->
 
 <div>
 
@@ -1438,106 +1312,50 @@ body{
 
 
     <div class="trow">
-
-      <span>
-        Total Potong
-      </span>
-
-      <span id="tPotong">
-        -
-      </span>
-
+      <span>Total Potong</span>
+      <span id="tPotong">-</span>
     </div>
 
 
     <div class="trow">
-
-      <span>
-        Ideal Minyak
-      </span>
-
-      <span id="tIdeal">
-        -
-      </span>
-
+      <span>Ideal Minyak</span>
+      <span id="tIdeal">-</span>
     </div>
 
 
     <div class="trow">
-
-      <span>
-        Real Minyak
-      </span>
-
-      <span id="tReal">
-        -
-      </span>
-
+      <span>Real Minyak</span>
+      <span id="tReal">-</span>
     </div>
 
 
     <div class="trow">
-
-      <span>
-        Total Boros
-      </span>
-
-      <span id="tBoros">
-        -
-      </span>
-
+      <span>Total Boros</span>
+      <span id="tBoros">-</span>
     </div>
 
 
     <div class="trow">
-
-      <span>
-        Rugi Minyak
-      </span>
-
-      <span id="tRugi">
-        -
-      </span>
-
+      <span>Rugi Minyak</span>
+      <span id="tRugi">-</span>
     </div>
 
 
     <div class="trow">
-
-      <span>
-        Rata-rata / Potong
-      </span>
-
-      <span id="tRata">
-        -
-      </span>
-
+      <span>Rata-rata / Potong</span>
+      <span id="tRata">-</span>
     </div>
 
 
     <div class="trow">
-
-      <span>
-        Shift Paling Boros
-      </span>
-
-      <span id="tPaling">
-        -
-      </span>
-
+      <span>Shift Paling Boros</span>
+      <span id="tPaling">-</span>
     </div>
 
 
     <div class="trow">
-
-      <span>
-        Stok Akhir Hari Ini
-      </span>
-
-      <span id="tStokAkhir">
-        -
-      </span>
-
+      <span>Stok Akhir Hari Ini</span>
+      <span id="tStokAkhir">-</span>
     </div>
 
   </div>
@@ -1572,9 +1390,7 @@ body{
 </div>
 
 
-<!-- =========================
-     STATISTIK
-========================= -->
+<!-- STATISTIK -->
 
 <div class="card">
 
@@ -1641,9 +1457,7 @@ body{
 </div>
 
 
-<!-- =========================
-     CARA HITUNG
-========================= -->
+<!-- CARA HITUNG -->
 
 <div class="card">
 
@@ -1693,9 +1507,7 @@ body{
 </div>
 
 
-<!-- =========================
-     RIWAYAT
-========================= -->
+<!-- RIWAYAT -->
 
 <div class="card">
 
@@ -1728,7 +1540,7 @@ body{
 
 <div class="footer">
 
-  Golqi Oil Control
+  Golqi Oil Control | Dev By Rahim
 
   <br>
 
@@ -1738,37 +1550,119 @@ body{
 </div>
 
 
-</div>
+<!-- =====================================================
+     FIREBASE COMPAT SDK
+===================================================== -->
+
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 
 
 <script>
 
-/* =========================================
+/* =====================================================
+   FIREBASE CONFIG
+===================================================== */
+
+const firebaseConfig = {
+
+  apiKey:
+    "AIzaSyA2ORAQwRyfIZCTrhNA6Lu81_dpWAP8ttk",
+
+  authDomain:
+    "hpp-minyak.firebaseapp.com",
+
+  projectId:
+    "hpp-minyak",
+
+  storageBucket:
+    "hpp-minyak.firebasestorage.app",
+
+  messagingSenderId:
+    "658198937804",
+
+  appId:
+    "1:658198937804:web:c909fe0872e507bd7ec269",
+
+  measurementId:
+    "G-DWZ5B7E316"
+
+};
+
+
+/* =====================================================
+   FIREBASE INIT
+===================================================== */
+
+firebase.initializeApp(
+  firebaseConfig
+);
+
+const auth =
+  firebase.auth();
+
+const db =
+  firebase.firestore();
+
+
+/* =====================================================
+   COLLECTION
+===================================================== */
+
+const HISTORY_COLLECTION =
+  "golqi_oil_control_history";
+
+const CURRENT_COLLECTION =
+  "golqi_oil_control_current";
+
+const SETTINGS_COLLECTION =
+  "golqi_oil_control_settings";
+
+
+const CURRENT_DOC =
+  "main";
+
+
+/* =====================================================
    KONSTANTA
-========================================= */
+===================================================== */
 
 const IDEAL_ML = 19;
 
-const STORAGE =
-  "golqi_oil_control_final_v3";
 
-const DAY_STORAGE =
-  "golqi_current_day_v3";
+/* =====================================================
+   GLOBAL
+===================================================== */
 
-const LOCK_STORAGE =
-  "golqi_shift1_lock_v3";
+let firebaseReady = false;
+
+let currentUser = null;
+
+let saveTimer = null;
+
+let currentLock = false;
+
+let loadingCloud = false;
 
 
-/* =========================================
+/* =====================================================
    HELPER
-========================================= */
+===================================================== */
 
 function get(id){
 
+  const el =
+    document.getElementById(id);
+
+  if(!el){
+    return 0;
+  }
+
   return parseFloat(
-    document
-      .getElementById(id)
-      .value
+    el.value
   ) || 0;
 
 }
@@ -1776,19 +1670,26 @@ function get(id){
 
 function getText(id){
 
-  return document
-    .getElementById(id)
-    .value
-    .trim();
+  const el =
+    document.getElementById(id);
+
+  if(!el){
+    return "";
+  }
+
+  return el.value.trim();
 
 }
 
 
 function set(id,value){
 
-  document
-    .getElementById(id)
-    .innerText = value;
+  const el =
+    document.getElementById(id);
+
+  if(el){
+    el.innerText = value;
+  }
 
 }
 
@@ -1796,29 +1697,52 @@ function set(id,value){
 function money(number){
 
   return "Rp " +
-    Math.round(number)
-      .toLocaleString("id-ID");
+    Math.round(
+      Number(number) || 0
+    ).toLocaleString("id-ID");
 
 }
 
 
 function ml(number){
 
-  return Math.round(number)
-    .toLocaleString("id-ID")
+  return Math.round(
+    Number(number) || 0
+  ).toLocaleString("id-ID")
     + " ml";
 
 }
 
+
+/* =====================================================
+   TANGGAL LOKAL INDONESIA
+===================================================== */
 
 function todayKey(){
 
   const d =
     new Date();
 
-  return d
-    .toISOString()
-    .slice(0,10);
+  const year =
+    d.getFullYear();
+
+  const month =
+    String(
+      d.getMonth() + 1
+    ).padStart(2,"0");
+
+  const day =
+    String(
+      d.getDate()
+    ).padStart(2,"0");
+
+  return (
+    year +
+    "-" +
+    month +
+    "-" +
+    day
+  );
 
 }
 
@@ -1839,9 +1763,38 @@ function todayText(){
 }
 
 
-/* =========================================
-   STATUS
-========================================= */
+/* =====================================================
+   STATUS CLOUD
+===================================================== */
+
+function cloudStatus(
+  text,
+  type
+){
+
+  const el =
+    document.getElementById(
+      "cloudStatus"
+    );
+
+  if(!el){
+    return;
+  }
+
+  el.innerText = text;
+
+  el.className =
+    "cloudStatus " +
+    (
+      type || ""
+    );
+
+}
+
+
+/* =====================================================
+   STATUS AYAM
+===================================================== */
 
 function setStatus(
   id,
@@ -1849,14 +1802,20 @@ function setStatus(
 ){
 
   const el =
-    document
-      .getElementById(id);
+    document.getElementById(id);
+
+  if(!el){
+    return;
+  }
 
   el.className =
     "status";
 
 
-  if(perChicken <= 19){
+  if(
+    perChicken <= 19 &&
+    perChicken > 0
+  ){
 
     el.classList.add("hemat");
 
@@ -1865,7 +1824,10 @@ function setStatus(
 
   }
 
-  else if(perChicken <= 21){
+  else if(
+    perChicken <= 21 &&
+    perChicken > 0
+  ){
 
     el.classList.add("normal");
 
@@ -1874,7 +1836,9 @@ function setStatus(
 
   }
 
-  else{
+  else if(
+    perChicken > 21
+  ){
 
     el.classList.add("boros");
 
@@ -1883,12 +1847,19 @@ function setStatus(
 
   }
 
+  else{
+
+    el.innerText =
+      "Belum ada data";
+
+  }
+
 }
 
 
-/* =========================================
-   DATA INPUT SAAT INI
-========================================= */
+/* =====================================================
+   AMBIL DATA INPUT
+===================================================== */
 
 function ambilData(){
 
@@ -1901,6 +1872,10 @@ function ambilData(){
       get("stokAwal"),
 
     shift1:{
+
+      koki:
+        getText("koki1"),
+
       potong:
         get("ptg1"),
 
@@ -1912,9 +1887,14 @@ function ambilData(){
 
       keterangan:
         getText("ket1")
+
     },
 
     shift2:{
+
+      koki:
+        getText("koki2"),
+
       potong:
         get("ptg2"),
 
@@ -1926,6 +1906,7 @@ function ambilData(){
 
       keterangan:
         getText("ket2")
+
     }
 
   };
@@ -1933,9 +1914,9 @@ function ambilData(){
 }
 
 
-/* =========================================
+/* =====================================================
    HITUNG
-========================================= */
+===================================================== */
 
 function hitung(){
 
@@ -1944,7 +1925,9 @@ function hitung(){
 
 
   const hargaPerMl =
-    data.hargaLiter / 1000;
+    (
+      Number(data.hargaLiter) || 0
+    ) / 1000;
 
 
   let totalPotong = 0;
@@ -1957,33 +1940,40 @@ function hitung(){
 
 
   let previousSisa =
-    data.stokAwal;
+    Number(data.stokAwal) || 0;
 
 
-  let shifts = [];
+  const shifts = [];
 
 
   for(
-    let i=1;
-    i<=2;
+    let i = 1;
+    i <= 2;
     i++
   ){
 
     const shift =
-      data["shift"+i];
+      data[
+        "shift" + i
+      ];
 
 
     const ideal =
-      shift.potong *
-      IDEAL_ML;
+      (
+        Number(shift.potong) || 0
+      ) * IDEAL_ML;
 
 
     const real =
       Math.max(
         0,
         previousSisa +
-        shift.masuk -
-        shift.sisa
+        (
+          Number(shift.masuk) || 0
+        ) -
+        (
+          Number(shift.sisa) || 0
+        )
       );
 
 
@@ -2001,22 +1991,19 @@ function hitung(){
 
 
     set(
-      "ideal"+i,
+      "ideal" + i,
       ml(ideal)
     );
 
 
     set(
-      "real"+i,
+      "real" + i,
 
       shift.potong > 0
 
-        ? ml(real)
-          +
-          " / "
-          +
-          perAyam.toFixed(1)
-          +
+        ? ml(real) +
+          " / " +
+          perAyam.toFixed(1) +
           " ml/ptg"
 
         : "-"
@@ -2024,27 +2011,30 @@ function hitung(){
 
 
     set(
-      "boros"+i,
+      "boros" + i,
       ml(boros)
     );
 
 
     setStatus(
-      "status"+i,
+      "status" + i,
       perAyam
     );
 
 
     shifts.push({
 
+      koki:
+        shift.koki,
+
       potong:
-        shift.potong,
+        Number(shift.potong) || 0,
 
       masuk:
-        shift.masuk,
+        Number(shift.masuk) || 0,
 
       sisa:
-        shift.sisa,
+        Number(shift.sisa) || 0,
 
       ideal:
         ideal,
@@ -2065,7 +2055,7 @@ function hitung(){
 
 
     totalPotong +=
-      shift.potong;
+      Number(shift.potong) || 0;
 
     totalIdeal +=
       ideal;
@@ -2078,7 +2068,7 @@ function hitung(){
 
 
     previousSisa =
-      shift.sisa;
+      Number(shift.sisa) || 0;
 
   }
 
@@ -2155,8 +2145,9 @@ function hitung(){
 
   set(
     "tPotong",
-    totalPotong
-      .toLocaleString("id-ID")
+    totalPotong.toLocaleString(
+      "id-ID"
+    )
   );
 
 
@@ -2189,8 +2180,8 @@ function hitung(){
 
     totalPotong > 0
 
-      ? rata.toFixed(1)
-        + " ml"
+      ? rata.toFixed(1) +
+        " ml"
 
       : "-"
   );
@@ -2210,26 +2201,34 @@ function hitung(){
 
   set(
     "effText",
-    efisiensi.toFixed(1)
-      + "%"
+    efisiensi.toFixed(1) +
+    "%"
   );
 
 
-  document
-    .getElementById(
+  const progress =
+    document.getElementById(
       "progressBar"
-    )
-    .style.width =
+    );
+
+  if(progress){
+
+    progress.style.width =
       efisiensi + "%";
+
+  }
+
+
+  updateDayInfo();
 
 
   return {
 
     hargaLiter:
-      data.hargaLiter,
+      Number(data.hargaLiter) || 0,
 
     stokAwal:
-      data.stokAwal,
+      Number(data.stokAwal) || 0,
 
     totalPotong:
       totalPotong,
@@ -2266,45 +2265,80 @@ function hitung(){
 }
 
 
-/* =========================================
-   AUTOSAVE
-========================================= */
+/* =====================================================
+   DATA CURRENT UNTUK FIRESTORE
+===================================================== */
 
-function autoSave(){
+function buatCurrentData(){
 
-  const data =
-    ambilData();
+  const hasil =
+    hitung();
 
-
-  const current = {
+  return {
 
     tanggal:
       todayKey(),
 
+    tanggalText:
+      todayText(),
+
     waktu:
-      new Date()
-        .toISOString(),
+      new Date().toISOString(),
 
     data:
-      data,
+      ambilData(),
+
+    hasil:
+      hasil,
 
     locked:
-      getLockStatus()
+      currentLock,
+
+    updatedBy:
+      currentUser
+        ? currentUser.uid
+        : null
 
   };
 
-
-  localStorage.setItem(
-    DAY_STORAGE,
-    JSON.stringify(current)
-  );
+}
 
 
-  document
-    .getElementById(
-      "terakhirSimpan"
-    )
-    .innerText =
+/* =====================================================
+   SAVE CURRENT KE FIRESTORE
+===================================================== */
+
+async function autoSave(){
+
+  if(!firebaseReady){
+    return;
+  }
+
+  if(!currentUser){
+    return;
+  }
+
+  try{
+
+    const current =
+      buatCurrentData();
+
+
+    await db
+      .collection(
+        CURRENT_COLLECTION
+      )
+      .doc(CURRENT_DOC)
+      .set(
+        current,
+        {
+          merge:true
+        }
+      );
+
+
+    set(
+      "terakhirSimpan",
       new Date()
         .toLocaleTimeString(
           "id-ID",
@@ -2312,104 +2346,137 @@ function autoSave(){
             hour:"2-digit",
             minute:"2-digit"
           }
-        );
+        )
+    );
+
+
+    cloudStatus(
+      "☁️ Tersimpan di Firebase",
+      "ok"
+    );
+
+  }
+
+  catch(error){
+
+    console.error(
+      "AutoSave Firebase:",
+      error
+    );
+
+    cloudStatus(
+      "❌ Gagal menyimpan ke Firebase",
+      "error"
+    );
+
+  }
 
 }
 
 
-/* =========================================
-   LOAD AUTOSAVE
-========================================= */
+/* =====================================================
+   DEBOUNCE AUTOSAVE
+===================================================== */
 
-function loadCurrentDay(){
+function scheduleAutoSave(){
 
-  const saved =
-    JSON.parse(
-      localStorage.getItem(
-        DAY_STORAGE
-      ) || "null"
+  clearTimeout(
+    saveTimer
+  );
+
+
+  saveTimer =
+    setTimeout(
+      ()=>{
+        autoSave();
+      },
+      700
     );
 
+}
 
-  if(
-    !saved ||
-    saved.tanggal !== todayKey()
-  ){
 
-    buatHariBaruOtomatis();
+/* =====================================================
+   ISI DATA KE FORM
+===================================================== */
 
+function isiForm(data){
+
+  if(!data){
     return;
-
   }
-
-
-  const d =
-    saved.data;
 
 
   document.getElementById(
     "hargaLiter"
   ).value =
-    d.hargaLiter;
+    data.hargaLiter ?? 16500;
 
 
   document.getElementById(
     "stokAwal"
   ).value =
-    d.stokAwal;
+    data.stokAwal ?? 0;
+
+
+  document.getElementById(
+    "koki1"
+  ).value =
+    data.shift1?.koki || "";
 
 
   document.getElementById(
     "ptg1"
   ).value =
-    d.shift1.potong;
+    data.shift1?.potong ?? 0;
 
 
   document.getElementById(
     "masuk1"
   ).value =
-    d.shift1.masuk;
+    data.shift1?.masuk ?? 0;
 
 
   document.getElementById(
     "sisa1"
   ).value =
-    d.shift1.sisa;
+    data.shift1?.sisa ?? 0;
 
 
   document.getElementById(
     "ket1"
   ).value =
-    d.shift1.keterangan || "";
+    data.shift1?.keterangan || "";
+
+
+  document.getElementById(
+    "koki2"
+  ).value =
+    data.shift2?.koki || "";
 
 
   document.getElementById(
     "ptg2"
   ).value =
-    d.shift2.potong;
+    data.shift2?.potong ?? 0;
 
 
   document.getElementById(
     "masuk2"
   ).value =
-    d.shift2.masuk;
+    data.shift2?.masuk ?? 0;
 
 
   document.getElementById(
     "sisa2"
   ).value =
-    d.shift2.sisa;
+    data.shift2?.sisa ?? 0;
 
 
   document.getElementById(
     "ket2"
   ).value =
-    d.shift2.keterangan || "";
-
-
-  setLockStatus(
-    saved.locked || false
-  );
+    data.shift2?.keterangan || "";
 
 
   hitung();
@@ -2417,42 +2484,173 @@ function loadCurrentDay(){
 }
 
 
-/* =========================================
-   BUAT HARI BARU OTOMATIS
-========================================= */
+/* =====================================================
+   LOAD CURRENT DARI FIRESTORE
+===================================================== */
 
-function buatHariBaruOtomatis(){
+async function loadCurrentDay(){
 
-  const riwayat =
-    JSON.parse(
-      localStorage.getItem(
-        STORAGE
-      ) || "[]"
+  if(!firebaseReady){
+    return;
+  }
+
+
+  try{
+
+    loadingCloud = true;
+
+
+    cloudStatus(
+      "☁️ Mengambil data dari Firebase...",
+      "loading"
     );
 
 
+    const snap =
+      await db
+        .collection(
+          CURRENT_COLLECTION
+        )
+        .doc(CURRENT_DOC)
+        .get();
+
+
+    if(
+      snap.exists
+    ){
+
+      const current =
+        snap.data();
+
+
+      /*
+       Jika data current
+       masih untuk hari ini,
+       tampilkan.
+      */
+
+      if(
+        current.tanggal ===
+        todayKey()
+      ){
+
+        currentLock =
+          Boolean(
+            current.locked
+          );
+
+
+        isiForm(
+          current.data
+        );
+
+
+        setLockStatus(
+          currentLock
+        );
+
+
+        cloudStatus(
+          "☁️ Data hari ini berhasil dimuat",
+          "ok"
+        );
+
+        return;
+
+      }
+
+    }
+
+
+    /*
+      Kalau belum ada data
+      hari ini, ambil stok
+      akhir dari riwayat
+      terakhir.
+    */
+
+    await buatHariBaruOtomatis();
+
+  }
+
+  catch(error){
+
+    console.error(
+      "Load Current:",
+      error
+    );
+
+    cloudStatus(
+      "❌ Gagal mengambil data Firebase",
+      "error"
+    );
+
+  }
+
+  finally{
+
+    loadingCloud = false;
+
+  }
+
+}
+
+
+/* =====================================================
+   BUAT HARI BARU OTOMATIS
+===================================================== */
+
+async function buatHariBaruOtomatis(){
+
   let stokBesok = 0;
 
-  let harga =
-    16500;
+  let harga = 16500;
 
 
-  if(riwayat.length > 0){
+  try{
 
-    const terakhir =
-      riwayat[0];
+    const snapshot =
+      await db
+        .collection(
+          HISTORY_COLLECTION
+        )
+        .orderBy(
+          "tanggalKey",
+          "desc"
+        )
+        .limit(1)
+        .get();
 
 
-    stokBesok =
-      Number(
-        terakhir.stokAkhir
-      ) || 0;
+    if(
+      !snapshot.empty
+    ){
+
+      const terakhir =
+        snapshot.docs[0].data();
 
 
-    harga =
-      Number(
-        terakhir.hargaLiter
-      ) || 16500;
+      stokBesok =
+        Number(
+          terakhir.stokAkhir
+        ) || 0;
+
+
+      harga =
+        Number(
+          terakhir.hargaLiter
+        ) || 16500;
+
+    }
+
+  }
+
+  catch(error){
+
+    console.error(
+      "Ambil riwayat terakhir:",
+      error
+    );
 
   }
 
@@ -2472,22 +2670,32 @@ function buatHariBaruOtomatis(){
   resetShiftInputs();
 
 
-  localStorage.setItem(
-    LOCK_STORAGE,
-    "false"
+  currentLock =
+    false;
+
+
+  setLockStatus(
+    false
   );
 
 
-  autoSave();
+  hitung();
+
+
+  await autoSave();
 
 }
 
 
-/* =========================================
+/* =====================================================
    RESET SHIFT
-========================================= */
+===================================================== */
 
 function resetShiftInputs(){
+
+  document.getElementById(
+    "koki1"
+  ).value = "";
 
   document.getElementById(
     "ptg1"
@@ -2505,6 +2713,10 @@ function resetShiftInputs(){
     "ket1"
   ).value = "";
 
+
+  document.getElementById(
+    "koki2"
+  ).value = "";
 
   document.getElementById(
     "ptg2"
@@ -2525,47 +2737,51 @@ function resetShiftInputs(){
 }
 
 
-/* =========================================
-   LOCK STATUS
-========================================= */
+/* =====================================================
+   LOCK
+===================================================== */
 
 function getLockStatus(){
 
-  return (
-    localStorage.getItem(
-      LOCK_STORAGE
-    ) === "true"
-  );
+  return currentLock;
 
 }
 
 
-function setLockStatus(locked){
+function setLockStatus(
+  locked
+){
 
-  localStorage.setItem(
-    LOCK_STORAGE,
-    locked
-      ? "true"
-      : "false"
-  );
+  currentLock =
+    Boolean(locked);
 
 
   const ids = [
+
+    "koki1",
     "ptg1",
     "masuk1",
     "sisa1",
     "ket1"
+
   ];
 
 
-  ids.forEach(id=>{
+  ids.forEach(
+    id=>{
 
-    document
-      .getElementById(id)
-      .disabled =
-        locked;
+      const el =
+        document.getElementById(id);
 
-  });
+      if(el){
+
+        el.disabled =
+          currentLock;
+
+      }
+
+    }
+  );
 
 
   const status =
@@ -2580,13 +2796,16 @@ function setLockStatus(locked){
     );
 
 
-  if(locked){
+  if(
+    currentLock
+  ){
 
     status.className =
       "lockStatus locked";
 
     status.innerText =
       "🔒 SHIFT 1 TERKUNCI";
+
 
     button.className =
       "lockBtn unlock";
@@ -2604,6 +2823,7 @@ function setLockStatus(locked){
     status.innerText =
       "🔓 SHIFT 1 TERBUKA";
 
+
     button.className =
       "lockBtn lock";
 
@@ -2615,7 +2835,7 @@ function setLockStatus(locked){
 }
 
 
-function toggleLock(){
+async function toggleLock(){
 
   const locked =
     getLockStatus();
@@ -2653,9 +2873,12 @@ function toggleLock(){
     }
 
 
-    setLockStatus(true);
+    setLockStatus(
+      true
+    );
 
-    autoSave();
+
+    await autoSave();
 
   }
 
@@ -2672,72 +2895,109 @@ function toggleLock(){
     }
 
 
-    setLockStatus(false);
+    setLockStatus(
+      false
+    );
 
-    autoSave();
+
+    await autoSave();
 
   }
 
 }
 
 
-/* =========================================
-   STOK KEMARIN
-========================================= */
+/* =====================================================
+   GUNAKAN STOK KEMARIN
+===================================================== */
 
-function gunakanStokKemarin(){
+async function gunakanStokKemarin(){
 
-  const riwayat =
-    JSON.parse(
-      localStorage.getItem(
-        STORAGE
-      ) || "[]"
-    );
+  try{
+
+    const snapshot =
+      await db
+        .collection(
+          HISTORY_COLLECTION
+        )
+        .orderBy(
+          "tanggalKey",
+          "desc"
+        )
+        .limit(1)
+        .get();
 
 
-  if(
-    riwayat.length === 0
-  ){
+    if(
+      snapshot.empty
+    ){
+
+      alert(
+        "Belum ada stok dari hari sebelumnya."
+      );
+
+      return;
+
+    }
+
+
+    const item =
+      snapshot.docs[0].data();
+
+
+    const stok =
+      Number(
+        item.stokAkhir
+      ) || 0;
+
+
+    document.getElementById(
+      "stokAwal"
+    ).value =
+      stok;
+
+
+    hitung();
+
+    await autoSave();
+
 
     alert(
-      "Belum ada stok dari hari sebelumnya."
+      "✓ Stok awal diubah menjadi " +
+      ml(stok)
+    );
+
+  }
+
+  catch(error){
+
+    console.error(error);
+
+    alert(
+      "Gagal mengambil stok kemarin."
+    );
+
+  }
+
+}
+
+
+/* =====================================================
+   SIMPAN HARI
+===================================================== */
+
+async function simpanHari(){
+
+  if(!firebaseReady){
+
+    alert(
+      "Firebase belum siap. Tunggu beberapa detik."
     );
 
     return;
 
   }
 
-
-  const stok =
-    Number(
-      riwayat[0].stokAkhir
-    ) || 0;
-
-
-  document.getElementById(
-    "stokAwal"
-  ).value =
-    stok;
-
-
-  hitung();
-
-  autoSave();
-
-
-  alert(
-    "✓ Stok awal diubah menjadi "
-    + ml(stok)
-  );
-
-}
-
-
-/* =========================================
-   SIMPAN HARI
-========================================= */
-
-function simpanHari(){
 
   const data =
     hitung();
@@ -2756,156 +3016,153 @@ function simpanHari(){
   }
 
 
-  const riwayat =
-    JSON.parse(
-      localStorage.getItem(
-        STORAGE
-      ) || "[]"
+  try{
+
+    cloudStatus(
+      "☁️ Menyimpan hasil hari ini...",
+      "loading"
     );
 
 
-  const now =
-    new Date();
+    const now =
+      new Date();
 
 
-  const item = {
+    const item = {
 
-    id:
-      Date.now(),
+      id:
+        Date.now(),
 
-    tanggal:
-      todayText(),
+      tanggal:
+        todayText(),
 
-    tanggalKey:
-      todayKey(),
+      tanggalKey:
+        todayKey(),
 
-    jam:
-      now.toLocaleTimeString(
-        "id-ID",
-        {
-          hour:"2-digit",
-          minute:"2-digit"
-        }
-      ),
+      jam:
+        now.toLocaleTimeString(
+          "id-ID",
+          {
+            hour:"2-digit",
+            minute:"2-digit"
+          }
+        ),
 
-    hargaLiter:
-      data.hargaLiter,
+      hargaLiter:
+        data.hargaLiter,
 
-    stokAwal:
-      data.stokAwal,
+      stokAwal:
+        data.stokAwal,
 
-    stokAkhir:
-      data.stokAkhir,
+      stokAkhir:
+        data.stokAkhir,
 
-    totalPotong:
-      data.totalPotong,
+      totalPotong:
+        data.totalPotong,
 
-    totalIdeal:
-      data.totalIdeal,
+      totalIdeal:
+        data.totalIdeal,
 
-    totalReal:
-      data.totalReal,
+      totalReal:
+        data.totalReal,
 
-    totalBoros:
-      data.totalBoros,
+      totalBoros:
+        data.totalBoros,
 
-    rugi:
-      data.rugi,
+      rugi:
+        data.rugi,
 
-    rata:
-      data.rata,
+      rata:
+        data.rata,
 
-    palingBoros:
-      data.palingBoros,
+      palingBoros:
+        data.palingBoros,
 
-    efisiensi:
-      data.efisiensi,
+      efisiensi:
+        data.efisiensi,
 
-    shifts:
-      data.shifts
+      shifts:
+        data.shifts,
 
-  };
+      updatedAt:
+        firebase.firestore.FieldValue.serverTimestamp()
+
+    };
 
 
-  /*
-    Jika hari yang sama sudah pernah
-    disimpan, update data tersebut.
-  */
+    /*
+      ID dokumen memakai tanggal.
+      Jadi satu hari hanya mempunyai
+      satu data riwayat.
+    */
 
-  const index =
-    riwayat.findIndex(
-      x =>
-        x.tanggalKey ===
+    await db
+      .collection(
+        HISTORY_COLLECTION
+      )
+      .doc(
         todayKey()
+      )
+      .set(
+        item,
+        {
+          merge:true
+        }
+      );
+
+
+    await autoSave();
+
+
+    await renderHistory();
+
+    await updateStats();
+
+
+    cloudStatus(
+      "☁️ Hasil hari ini tersimpan di Firebase",
+      "ok"
     );
 
 
-  if(index >= 0){
-
-    riwayat[index] =
-      item;
-
-  }
-
-  else{
-
-    riwayat.unshift(
-      item
+    alert(
+      "✓ Hasil hari ini berhasil disimpan.\n\n" +
+      "Stok akhir " +
+      ml(data.stokAkhir) +
+      " akan otomatis menjadi stok awal berikutnya."
     );
 
   }
 
+  catch(error){
 
-  riwayat.sort(
-    (a,b)=>
-      b.id - a.id
-  );
-
-
-  localStorage.setItem(
-    STORAGE,
-    JSON.stringify(riwayat)
-  );
+    console.error(
+      "Simpan hari:",
+      error
+    );
 
 
-  /*
-    Stok akhir hari ini
-    disimpan untuk besok.
-  */
-
-  localStorage.setItem(
-    "golqi_next_stock_v3",
-    String(
-      data.stokAkhir
-    )
-  );
+    cloudStatus(
+      "❌ Gagal menyimpan hasil",
+      "error"
+    );
 
 
-  autoSave();
+    alert(
+      "Gagal menyimpan ke Firebase.\n\n" +
+      error.message
+    );
 
-  renderHistory();
-
-  updateStats();
-
-
-  alert(
-    "✓ Hasil hari ini berhasil disimpan.\n\n"
-    +
-    "Stok akhir "
-    +
-    ml(data.stokAkhir)
-    +
-    " akan otomatis menjadi stok awal besok."
-  );
+  }
 
 }
 
 
-/* =========================================
+/* =====================================================
    MULAI HARI BARU
-========================================= */
+===================================================== */
 
-function mulaiHariBaru(){
+async function mulaiHariBaru(){
 
   const current =
     hitung();
@@ -2917,10 +3174,8 @@ function mulaiHariBaru(){
 
     if(
       !confirm(
-        "Data hari ini sudah berisi.\n\n"
-        +
-        "Pastikan hasil hari ini sudah disimpan.\n\n"
-        +
+        "Data hari ini sudah berisi.\n\n" +
+        "Pastikan hasil hari ini sudah disimpan.\n\n" +
         "Mulai hari baru?"
       )
     ){
@@ -2955,30 +3210,31 @@ function mulaiHariBaru(){
   resetShiftInputs();
 
 
-  setLockStatus(false);
+  setLockStatus(
+    false
+  );
 
 
   hitung();
 
-  autoSave();
+
+  await autoSave();
 
 
   alert(
-    "🌅 Hari baru dimulai.\n\n"
-    +
-    "Stok awal otomatis: "
-    +
+    "🌅 Hari baru dimulai.\n\n" +
+    "Stok awal otomatis: " +
     ml(stokBesok)
   );
 
 }
 
 
-/* =========================================
+/* =====================================================
    RESET INPUT
-========================================= */
+===================================================== */
 
-function resetInput(){
+async function resetInput(){
 
   if(
     !confirm(
@@ -2993,6 +3249,7 @@ function resetInput(){
 
   const stok =
     get("stokAwal");
+
 
   const harga =
     get("hargaLiter");
@@ -3013,21 +3270,57 @@ function resetInput(){
     harga;
 
 
-  setLockStatus(false);
+  setLockStatus(
+    false
+  );
 
 
   hitung();
 
-  autoSave();
+
+  await autoSave();
 
 }
 
 
-/* =========================================
-   RIWAYAT
-========================================= */
+/* =====================================================
+   ESCAPE HTML
+===================================================== */
 
-function renderHistory(){
+function escapeHTML(value){
+
+  return String(
+    value ?? ""
+  )
+  .replace(
+    /&/g,
+    "&amp;"
+  )
+  .replace(
+    /</g,
+    "&lt;"
+  )
+  .replace(
+    />/g,
+    "&gt;"
+  )
+  .replace(
+    /"/g,
+    "&quot;"
+  )
+  .replace(
+    /'/g,
+    "&#039;"
+  );
+
+}
+
+
+/* =====================================================
+   RIWAYAT
+===================================================== */
+
+async function renderHistory(){
 
   const history =
     document.getElementById(
@@ -3035,405 +3328,554 @@ function renderHistory(){
     );
 
 
-  const riwayat =
-    JSON.parse(
-      localStorage.getItem(
-        STORAGE
-      ) || "[]"
-    );
-
-
-  if(
-    riwayat.length === 0
-  ){
+  if(!firebaseReady){
 
     history.innerHTML =
-      `
-      <div class="empty">
-        Belum ada riwayat.
-      </div>
-      `;
+      '<div class="empty">Menghubungkan ke Firebase...</div>';
 
     return;
 
   }
 
 
-  history.innerHTML =
-    riwayat
-      .map(item=>{
-
-        return `
-
-        <div class="historyItem">
-
-          <div class="historyTop">
-
-            <span>
-              📅 ${item.tanggal}
-            </span>
-
-            <span>
-              ${item.jam}
-            </span>
-
-          </div>
-
-
-          <div class="historyDate">
-
-            Harga:
-            ${money(item.hargaLiter)}
-            /liter
-
-            <br>
-
-            Stok awal:
-            ${ml(item.stokAwal)}
-
-            <br>
-
-            Stok akhir:
-            ${ml(item.stokAkhir)}
-
-          </div>
-
-
-          <div class="historyGrid">
-
-            <div>
-
-              <small>
-                TOTAL POTONG
-              </small>
-
-              <b>
-                ${item.totalPotong
-                  .toLocaleString("id-ID")}
-              </b>
-
-            </div>
-
-
-            <div>
-
-              <small>
-                IDEAL
-              </small>
-
-              <b>
-                ${ml(item.totalIdeal)}
-              </b>
-
-            </div>
-
-
-            <div>
-
-              <small>
-                REAL
-              </small>
-
-              <b>
-                ${ml(item.totalReal)}
-              </b>
-
-            </div>
-
-
-            <div>
-
-              <small>
-                TOTAL BOROS
-              </small>
-
-              <b>
-                ${ml(item.totalBoros)}
-              </b>
-
-            </div>
-
-
-            <div>
-
-              <small>
-                RUGI
-              </small>
-
-              <b>
-                ${money(item.rugi)}
-              </b>
-
-            </div>
-
-
-            <div>
-
-              <small>
-                RATA-RATA
-              </small>
-
-              <b>
-                ${item.rata.toFixed(1)}
-                ml/ptg
-              </b>
-
-            </div>
-
-          </div>
-
-
-          <!-- SHIFT 1 -->
-
-          <div class="historyShift">
-
-            <div class="historyShiftTitle">
-              🔴 SHIFT 1
-            </div>
-
-
-            <div class="historyShiftLine">
-
-              <span>
-                Potong
-              </span>
-
-              <b>
-                ${item.shifts[0].potong}
-              </b>
-
-            </div>
-
-
-            <div class="historyShiftLine">
-
-              <span>
-                Minyak Masuk
-              </span>
-
-              <b>
-                ${ml(item.shifts[0].masuk)}
-              </b>
-
-            </div>
-
-
-            <div class="historyShiftLine">
-
-              <span>
-                Ideal
-              </span>
-
-              <b>
-                ${ml(item.shifts[0].ideal)}
-              </b>
-
-            </div>
-
-
-            <div class="historyShiftLine">
-
-              <span>
-                Real
-              </span>
-
-              <b>
-                ${ml(item.shifts[0].real)}
-              </b>
-
-            </div>
-
-
-            <div class="historyShiftLine">
-
-              <span>
-                Boros
-              </span>
-
-              <b>
-                ${ml(item.shifts[0].boros)}
-              </b>
-
-            </div>
-
-
-            <div class="historyShiftLine">
-
-              <span>
-                Rata-rata
-              </span>
-
-              <b>
-                ${item.shifts[0]
-                  .perAyam
-                  .toFixed(1)}
-                ml/ptg
-              </b>
-
-            </div>
-
-
-            <div class="historyShiftLine">
-
-              <span>
-                Sisa
-              </span>
-
-              <b>
-                ${ml(item.shifts[0].sisa)}
-              </b>
-
-            </div>
-
-
-          </div>
-
-
-          <!-- SHIFT 2 -->
-
-          <div class="historyShift">
-
-            <div class="historyShiftTitle">
-              🔴 SHIFT 2
-            </div>
-
-
-            <div class="historyShiftLine">
-
-              <span>
-                Potong
-              </span>
-
-              <b>
-                ${item.shifts[1].potong}
-              </b>
-
-            </div>
-
-
-            <div class="historyShiftLine">
-
-              <span>
-                Minyak Masuk
-              </span>
-
-              <b>
-                ${ml(item.shifts[1].masuk)}
-              </b>
-
-            </div>
-
-
-            <div class="historyShiftLine">
-
-              <span>
-                Ideal
-              </span>
-
-              <b>
-                ${ml(item.shifts[1].ideal)}
-              </b>
-
-            </div>
-
-
-            <div class="historyShiftLine">
-
-              <span>
-                Real
-              </span>
-
-              <b>
-                ${ml(item.shifts[1].real)}
-              </b>
-
-            </div>
-
-
-            <div class="historyShiftLine">
-
-              <span>
-                Boros
-              </span>
-
-              <b>
-                ${ml(item.shifts[1].boros)}
-              </b>
-
-            </div>
-
-
-            <div class="historyShiftLine">
-
-              <span>
-                Rata-rata
-              </span>
-
-              <b>
-                ${item.shifts[1]
-                  .perAyam
-                  .toFixed(1)}
-                ml/ptg
-              </b>
-
-            </div>
-
-
-            <div class="historyShiftLine">
-
-              <span>
-                Sisa
-              </span>
-
-              <b>
-                ${ml(item.shifts[1].sisa)}
-              </b>
-
-            </div>
-
-
-          </div>
-
-
-          <div class="historyDate">
-
-            🔥 Shift paling boros:
-            <b>
-              ${item.palingBoros}
-            </b>
-
-            <br>
-
-            📊 Efisiensi:
-            <b>
-              ${item.efisiensi.toFixed(1)}%
-            </b>
-
-          </div>
-
-
-          <button
-            class="historyDelete"
-            onclick="hapusRiwayat(${item.id})"
-          >
-            🗑️ HAPUS RIWAYAT INI
-          </button>
-
+  try{
+
+    const snapshot =
+      await db
+        .collection(
+          HISTORY_COLLECTION
+        )
+        .orderBy(
+          "tanggalKey",
+          "desc"
+        )
+        .get();
+
+
+    if(
+      snapshot.empty
+    ){
+
+      history.innerHTML =
+        `
+        <div class="empty">
+          Belum ada riwayat.
         </div>
-
         `;
 
-      })
-      .join("");
+      return;
+
+    }
+
+
+    const riwayat =
+      snapshot.docs.map(
+        doc=>({
+
+          docId:
+            doc.id,
+
+          ...doc.data()
+
+        })
+      );
+
+
+    history.innerHTML =
+      riwayat
+        .map(
+          item=>{
+
+            const shift1 =
+              item.shifts?.[0] || {};
+
+            const shift2 =
+              item.shifts?.[1] || {};
+
+
+            return `
+
+            <div class="historyItem">
+
+              <div class="historyTop">
+
+                <span>
+                  📅
+                  ${escapeHTML(item.tanggal)}
+                </span>
+
+                <span>
+                  ${escapeHTML(item.jam || "")}
+                </span>
+
+              </div>
+
+
+              <div class="historyDate">
+
+                Harga:
+                ${money(item.hargaLiter)}
+                /liter
+
+                <br>
+
+                Stok awal:
+                ${ml(item.stokAwal)}
+
+                <br>
+
+                Stok akhir:
+                ${ml(item.stokAkhir)}
+
+              </div>
+
+
+              <div class="historyGrid">
+
+                <div>
+
+                  <small>
+                    TOTAL POTONG
+                  </small>
+
+                  <b>
+                    ${Number(
+                      item.totalPotong || 0
+                    ).toLocaleString("id-ID")}
+                  </b>
+
+                </div>
+
+
+                <div>
+
+                  <small>
+                    IDEAL
+                  </small>
+
+                  <b>
+                    ${ml(item.totalIdeal)}
+                  </b>
+
+                </div>
+
+
+                <div>
+
+                  <small>
+                    REAL
+                  </small>
+
+                  <b>
+                    ${ml(item.totalReal)}
+                  </b>
+
+                </div>
+
+
+                <div>
+
+                  <small>
+                    TOTAL BOROS
+                  </small>
+
+                  <b>
+                    ${ml(item.totalBoros)}
+                  </b>
+
+                </div>
+
+
+                <div>
+
+                  <small>
+                    RUGI
+                  </small>
+
+                  <b>
+                    ${money(item.rugi)}
+                  </b>
+
+                </div>
+
+
+                <div>
+
+                  <small>
+                    RATA-RATA
+                  </small>
+
+                  <b>
+                    ${Number(
+                      item.rata || 0
+                    ).toFixed(1)}
+                    ml/ptg
+                  </b>
+
+                </div>
+
+              </div>
+
+
+              <!-- SHIFT 1 -->
+
+              <div class="historyShift">
+
+                <div class="historyShiftTitle">
+                  🔴 SHIFT 1
+                </div>
+
+
+                <div class="historyShiftLine">
+
+                  <span>
+                    👨‍🍳 Koki
+                  </span>
+
+                  <b>
+                    ${escapeHTML(
+                      shift1.koki || "-"
+                    )}
+                  </b>
+
+                </div>
+
+
+                <div class="historyShiftLine">
+
+                  <span>
+                    Potong
+                  </span>
+
+                  <b>
+                    ${Number(
+                      shift1.potong || 0
+                    )}
+                  </b>
+
+                </div>
+
+
+                <div class="historyShiftLine">
+
+                  <span>
+                    Minyak Masuk
+                  </span>
+
+                  <b>
+                    ${ml(
+                      shift1.masuk
+                    )}
+                  </b>
+
+                </div>
+
+
+                <div class="historyShiftLine">
+
+                  <span>
+                    Ideal
+                  </span>
+
+                  <b>
+                    ${ml(
+                      shift1.ideal
+                    )}
+                  </b>
+
+                </div>
+
+
+                <div class="historyShiftLine">
+
+                  <span>
+                    Real
+                  </span>
+
+                  <b>
+                    ${ml(
+                      shift1.real
+                    )}
+                  </b>
+
+                </div>
+
+
+                <div class="historyShiftLine">
+
+                  <span>
+                    Boros
+                  </span>
+
+                  <b>
+                    ${ml(
+                      shift1.boros
+                    )}
+                  </b>
+
+                </div>
+
+
+                <div class="historyShiftLine">
+
+                  <span>
+                    Rata-rata
+                  </span>
+
+                  <b>
+                    ${Number(
+                      shift1.perAyam || 0
+                    ).toFixed(1)}
+                    ml/ptg
+                  </b>
+
+                </div>
+
+
+                <div class="historyShiftLine">
+
+                  <span>
+                    Sisa
+                  </span>
+
+                  <b>
+                    ${ml(
+                      shift1.sisa
+                    )}
+                  </b>
+
+                </div>
+
+
+                <div class="historyShiftLine">
+
+                  <span>
+                    Keterangan
+                  </span>
+
+                  <b>
+                    ${escapeHTML(
+                      shift1.keterangan || "-"
+                    )}
+                  </b>
+
+                </div>
+
+              </div>
+
+
+              <!-- SHIFT 2 -->
+
+              <div class="historyShift">
+
+                <div class="historyShiftTitle">
+                  🔴 SHIFT 2
+                </div>
+
+
+                <div class="historyShiftLine">
+
+                  <span>
+                    👨‍🍳 Koki
+                  </span>
+
+                  <b>
+                    ${escapeHTML(
+                      shift2.koki || "-"
+                    )}
+                  </b>
+
+                </div>
+
+
+                <div class="historyShiftLine">
+
+                  <span>
+                    Potong
+                  </span>
+
+                  <b>
+                    ${Number(
+                      shift2.potong || 0
+                    )}
+                  </b>
+
+                </div>
+
+
+                <div class="historyShiftLine">
+
+                  <span>
+                    Minyak Masuk
+                  </span>
+
+                  <b>
+                    ${ml(
+                      shift2.masuk
+                    )}
+                  </b>
+
+                </div>
+
+
+                <div class="historyShiftLine">
+
+                  <span>
+                    Ideal
+                  </span>
+
+                  <b>
+                    ${ml(
+                      shift2.ideal
+                    )}
+                  </b>
+
+                </div>
+
+
+                <div class="historyShiftLine">
+
+                  <span>
+                    Real
+                  </span>
+
+                  <b>
+                    ${ml(
+                      shift2.real
+                    )}
+                  </b>
+
+                </div>
+
+
+                <div class="historyShiftLine">
+
+                  <span>
+                    Boros
+                  </span>
+
+                  <b>
+                    ${ml(
+                      shift2.boros
+                    )}
+                  </b>
+
+                </div>
+
+
+                <div class="historyShiftLine">
+
+                  <span>
+                    Rata-rata
+                  </span>
+
+                  <b>
+                    ${Number(
+                      shift2.perAyam || 0
+                    ).toFixed(1)}
+                    ml/ptg
+                  </b>
+
+                </div>
+
+
+                <div class="historyShiftLine">
+
+                  <span>
+                    Sisa
+                  </span>
+
+                  <b>
+                    ${ml(
+                      shift2.sisa
+                    )}
+                  </b>
+
+                </div>
+
+
+                <div class="historyShiftLine">
+
+                  <span>
+                    Keterangan
+                  </span>
+
+                  <b>
+                    ${escapeHTML(
+                      shift2.keterangan || "-"
+                    )}
+                  </b>
+
+                </div>
+
+              </div>
+
+
+              <div class="historyDate">
+
+                🔥 Shift paling boros:
+                <b>
+                  ${escapeHTML(
+                    item.palingBoros || "-"
+                  )}
+                </b>
+
+                <br>
+
+                📊 Efisiensi:
+                <b>
+                  ${Number(
+                    item.efisiensi || 0
+                  ).toFixed(1)}%
+                </b>
+
+              </div>
+
+
+              <button
+                class="historyDelete"
+                onclick="hapusRiwayat('${escapeHTML(item.docId)}')"
+              >
+                🗑️ HAPUS RIWAYAT INI
+              </button>
+
+            </div>
+
+            `;
+
+          }
+        )
+        .join("");
+
+  }
+
+  catch(error){
+
+    console.error(
+      "Render History:",
+      error
+    );
+
+
+    history.innerHTML =
+      `
+      <div class="empty">
+        ❌ Gagal memuat riwayat.
+      </div>
+      `;
+
+  }
 
 }
 
 
-/* =========================================
+/* =====================================================
    HAPUS SATU RIWAYAT
-========================================= */
+===================================================== */
 
-function hapusRiwayat(id){
+async function hapusRiwayat(
+  docId
+){
 
   if(
     !confirm(
@@ -3446,163 +3888,265 @@ function hapusRiwayat(id){
   }
 
 
-  let riwayat =
-    JSON.parse(
-      localStorage.getItem(
-        STORAGE
-      ) || "[]"
+  try{
+
+    await db
+      .collection(
+        HISTORY_COLLECTION
+      )
+      .doc(docId)
+      .delete();
+
+
+    await renderHistory();
+
+    await updateStats();
+
+
+    cloudStatus(
+      "☁️ Riwayat dihapus dari Firebase",
+      "ok"
     );
 
+  }
 
-  riwayat =
-    riwayat.filter(
-      item =>
-        item.id !== id
-    );
+  catch(error){
 
-
-  localStorage.setItem(
-    STORAGE,
-    JSON.stringify(
-      riwayat
-    )
-  );
-
-
-  renderHistory();
-
-  updateStats();
-
-}
-
-
-/* =========================================
-   HAPUS SEMUA RIWAYAT
-========================================= */
-
-function hapusSemuaRiwayat(){
-
-  const riwayat =
-    JSON.parse(
-      localStorage.getItem(
-        STORAGE
-      ) || "[]"
-    );
-
-
-  if(
-    riwayat.length === 0
-  ){
+    console.error(error);
 
     alert(
-      "Belum ada riwayat."
+      "Gagal menghapus riwayat."
     );
 
-    return;
-
   }
-
-
-  if(
-    !confirm(
-      "Yakin ingin menghapus SEMUA riwayat?"
-    )
-  ){
-
-    return;
-
-  }
-
-
-  localStorage.removeItem(
-    STORAGE
-  );
-
-
-  renderHistory();
-
-  updateStats();
 
 }
 
 
-/* =========================================
-   STATISTIK
-========================================= */
+/* =====================================================
+   HAPUS SEMUA RIWAYAT
+===================================================== */
 
-function updateStats(){
+async function hapusSemuaRiwayat(){
 
-  const riwayat =
-    JSON.parse(
-      localStorage.getItem(
-        STORAGE
-      ) || "[]"
-    );
+  try{
 
-
-  let totalPotong = 0;
-
-  let totalBoros = 0;
-
-  let totalRugi = 0;
+    const snapshot =
+      await db
+        .collection(
+          HISTORY_COLLECTION
+        )
+        .get();
 
 
-  riwayat.forEach(item=>{
+    if(
+      snapshot.empty
+    ){
 
-    totalPotong +=
-      Number(
-        item.totalPotong
-      ) || 0;
+      alert(
+        "Belum ada riwayat."
+      );
 
+      return;
 
-    totalBoros +=
-      Number(
-        item.totalBoros
-      ) || 0;
-
-
-    totalRugi +=
-      Number(
-        item.rugi
-      ) || 0;
-
-  });
+    }
 
 
-  set(
-    "statHari",
-    riwayat.length
-      + " hari"
-  );
-
-
-  set(
-    "statPotong",
-    totalPotong
-      .toLocaleString(
-        "id-ID"
+    if(
+      !confirm(
+        "Yakin ingin menghapus SEMUA riwayat dari semua perangkat?"
       )
-      + " potong"
-  );
+    ){
+
+      return;
+
+    }
 
 
-  set(
-    "statBoros",
-    ml(totalBoros)
-  );
+    /*
+      Firestore batch maksimal
+      500 operasi.
+      Kita gunakan 400 agar aman.
+    */
+
+    let batch =
+      db.batch();
+
+    let count = 0;
 
 
-  set(
-    "statRugi",
-    money(totalRugi)
-  );
+    for(
+      const doc of snapshot.docs
+    ){
+
+      batch.delete(
+        doc.ref
+      );
+
+      count++;
+
+
+      if(
+        count >= 400
+      ){
+
+        await batch.commit();
+
+        batch =
+          db.batch();
+
+        count = 0;
+
+      }
+
+    }
+
+
+    if(
+      count > 0
+    ){
+
+      await batch.commit();
+
+    }
+
+
+    await renderHistory();
+
+    await updateStats();
+
+
+    cloudStatus(
+      "☁️ Semua riwayat berhasil dihapus",
+      "ok"
+    );
+
+
+    alert(
+      "✓ Semua riwayat berhasil dihapus."
+    );
+
+  }
+
+  catch(error){
+
+    console.error(
+      "Hapus semua:",
+      error
+    );
+
+
+    alert(
+      "Gagal menghapus semua riwayat.\n\n" +
+      error.message
+    );
+
+  }
 
 }
 
 
-/* =========================================
+/* =====================================================
+   STATISTIK
+===================================================== */
+
+async function updateStats(){
+
+  if(!firebaseReady){
+    return;
+  }
+
+
+  try{
+
+    const snapshot =
+      await db
+        .collection(
+          HISTORY_COLLECTION
+        )
+        .get();
+
+
+    let totalPotong = 0;
+
+    let totalBoros = 0;
+
+    let totalRugi = 0;
+
+
+    snapshot.forEach(
+      doc=>{
+
+        const item =
+          doc.data();
+
+
+        totalPotong +=
+          Number(
+            item.totalPotong
+          ) || 0;
+
+
+        totalBoros +=
+          Number(
+            item.totalBoros
+          ) || 0;
+
+
+        totalRugi +=
+          Number(
+            item.rugi
+          ) || 0;
+
+      }
+    );
+
+
+    set(
+      "statHari",
+      snapshot.size +
+      " hari"
+    );
+
+
+    set(
+      "statPotong",
+      totalPotong
+        .toLocaleString(
+          "id-ID"
+        ) +
+      " potong"
+    );
+
+
+    set(
+      "statBoros",
+      ml(totalBoros)
+    );
+
+
+    set(
+      "statRugi",
+      money(totalRugi)
+    );
+
+  }
+
+  catch(error){
+
+    console.error(
+      "Stats:",
+      error
+    );
+
+  }
+
+}
+
+
+/* =====================================================
    INFO HARI
-========================================= */
+===================================================== */
 
 function updateDayInfo(){
 
@@ -3622,31 +4166,213 @@ function updateDayInfo(){
 }
 
 
-/* =========================================
-   INIT
-========================================= */
+/* =====================================================
+   FIREBASE AUTH
+===================================================== */
+
+async function initFirebase(){
+
+  try{
+
+    cloudStatus(
+      "☁️ Menghubungkan akun anonim...",
+      "loading"
+    );
+
+
+    /*
+      Login anonim.
+      Setiap perangkat mendapatkan
+      akun anonim Firebase.
+
+      Rules Firestore kita menggunakan:
+      request.auth != null
+
+      Jadi perangkat yang berhasil
+      login dapat mengakses database.
+    */
+
+    const result =
+      await auth
+        .signInAnonymously();
+
+
+    currentUser =
+      result.user;
+
+
+    firebaseReady =
+      true;
+
+
+    cloudStatus(
+      "☁️ Terhubung ke Firebase",
+      "ok"
+    );
+
+
+    await loadCurrentDay();
+
+    await renderHistory();
+
+    await updateStats();
+
+
+    /*
+      Listener untuk current data.
+      Jika perangkat lain mengubah
+      data utama, data cloud dapat
+      diterima juga.
+    */
+
+    db
+      .collection(
+        CURRENT_COLLECTION
+      )
+      .doc(CURRENT_DOC)
+      .onSnapshot(
+        snapshot=>{
+
+          if(
+            !snapshot.exists
+          ){
+            return;
+          }
+
+
+          const remote =
+            snapshot.data();
+
+
+          /*
+            Jangan langsung menimpa
+            ketika aplikasi sedang
+            mengambil data awal.
+          */
+
+          if(
+            loadingCloud
+          ){
+
+            return;
+
+          }
+
+
+          /*
+            Jika data berasal dari
+            perangkat lain dan masih
+            merupakan hari aktif,
+            tampilkan datanya.
+          */
+
+          if(
+            remote.tanggal ===
+            todayKey()
+          ){
+
+            /*
+              Hindari menerapkan
+              snapshot kosong.
+            */
+
+            if(
+              remote.data
+            ){
+
+              /*
+                Jika sedang mengetik,
+                autosave akan segera
+                menyimpan perubahan.
+              */
+
+              isiForm(
+                remote.data
+              );
+
+
+              currentLock =
+                Boolean(
+                  remote.locked
+                );
+
+
+              setLockStatus(
+                currentLock
+              );
+
+            }
+
+          }
+
+        },
+        error=>{
+
+          console.error(
+            "Snapshot:",
+            error
+          );
+
+        }
+      );
+
+  }
+
+  catch(error){
+
+    console.error(
+      "Firebase Auth:",
+      error
+    );
+
+
+    firebaseReady =
+      false;
+
+
+    cloudStatus(
+      "❌ Firebase gagal terhubung",
+      "error"
+    );
+
+
+    alert(
+      "Firebase gagal terhubung.\n\n" +
+      error.message +
+      "\n\n" +
+      "Periksa Anonymous Authentication dan Rules Firestore."
+    );
+
+  }
+
+}
+
+
+/* =====================================================
+   INIT HALAMAN
+===================================================== */
 
 window.addEventListener(
   "load",
-  ()=>{
-
-    loadCurrentDay();
+  async ()=>{
 
     updateDayInfo();
 
     hitung();
 
-    renderHistory();
+    await initFirebase();
 
-    updateStats();
+    updateDayInfo();
+
+    hitung();
 
   }
 );
 
 
-/* =========================================
-   UPDATE INFO SETIAP INPUT
-========================================= */
+/* =====================================================
+   UPDATE INFO HARI
+===================================================== */
 
 setInterval(
   ()=>{
@@ -3657,6 +4383,6 @@ setInterval(
 
 </script>
 
-</body>
 
+</body>
 </html>
